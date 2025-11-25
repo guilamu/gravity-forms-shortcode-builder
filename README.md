@@ -35,7 +35,7 @@ gravity-forms-shortcode-builder/
 **`gf-shortcode-builder.php`**: The main plugin loader, menu integration, tab registration, and controller.
 **`tabs/`**: Each PHP class file handles rendering and logic for a specific tab (shortcode type).
 
-## Requirements
+## **✅ Requirements**
 
 - WordPress 5.8+ recommended
 - [Gravity Forms](https://www.gravityforms.com/) (any recent version)
@@ -58,7 +58,7 @@ gravity-forms-shortcode-builder/
 - Click any tab and fill out the options for your desired shortcode type.
 - Copy the auto-generated shortcode and insert it where needed in posts, pages, or widgets.
 
-## License & Feedback
+## **⚖️License & Feedback**
 
 This project is licensed under the GNU AGPL.
 Feedback, issues, and PRs welcome!

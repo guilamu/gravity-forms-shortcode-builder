@@ -57,7 +57,7 @@ gravity-forms-shortcode-builder/
 ## **🚀 Usage**
 
 - Click any tab and fill out the options for your desired shortcode type.
-- Copy the auto-generated shortcode and insert it where needed in posts, pages, or widgets.
+- Copy the auto-generated shortcode and insert it where needed in notifications, confirmations, posts, pages, etc.
 
 ## **⚖️License & Feedback**
 

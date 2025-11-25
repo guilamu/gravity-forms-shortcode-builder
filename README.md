@@ -40,8 +40,8 @@ gravity-forms-shortcode-builder/
 
 - WordPress 5.8+ recommended
 - [Gravity Forms](https://www.gravityforms.com/) (any recent version)
-- _Optional:_ [GF Advanced Conditional Shortcodes (by Gravity Wiz)](https://gravitywiz.com/gravity-forms-advanced-conditional-shortcode/) for AND/OR/regex in Conditions tab
-- _Optional:_ [GF Progress Meter (by Gravity Wiz)](https://gravitywiz.com/gravity-forms-progress-meter/) for Progress Meter functionality
+- _Optional Free Plugin:_ [GF Advanced Conditional Shortcodes (by Gravity Wiz)](https://gravitywiz.com/gravity-forms-advanced-conditional-shortcode/) for AND/OR/regex in Conditions tab
+- _Optional Free Plugin:_ [GF Progress Meter (by Gravity Wiz)](https://gravitywiz.com/gravity-forms-progress-meter/) for Progress Meter functionality
 
 ---
 

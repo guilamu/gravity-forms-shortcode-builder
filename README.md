@@ -17,7 +17,7 @@
 - **Entries Left:** Show the remaining entries before a form reaches its submission limit, great for limited offers and urgency.
 - **Progress Meter:** (Optional, requires [GF Progress Meter by GravityWiz](https://gravitywiz.com/gravity-forms-progress-meter/)) Visual meter showing progress toward a goal, supporting advanced tracking (payments, field values, etc.).
 
-## File Structure
+## 📂 Project Structure
 ```
 gravity-forms-shortcode-builder/
 ├── gf-shortcode-builder.php

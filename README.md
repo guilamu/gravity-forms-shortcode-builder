@@ -62,4 +62,5 @@ gravity-forms-shortcode-builder/
 ## **⚖️License & Feedback**
 
 This project is licensed under the GNU AGPL.
+
 Feedback, issues, and PRs welcome!

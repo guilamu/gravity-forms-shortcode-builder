@@ -33,6 +33,7 @@ gravity-forms-shortcode-builder/
 └── README.md
 ```
 **`gf-shortcode-builder.php`**: The main plugin loader, menu integration, tab registration, and controller.
+
 **`tabs/`**: Each PHP class file handles rendering and logic for a specific tab (shortcode type).
 
 ## **✅ Requirements**

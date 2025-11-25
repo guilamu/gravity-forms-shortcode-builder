@@ -9,13 +9,13 @@
 
 - **Tabbed Builder Interface:** Each shortcode category is in its own tab for clarity. Reorder tabs as you see fit.
 - **Core Form Display:** Build standard Gravity Forms embed shortcodes with title, description, AJAX, tab index, and field value options.
-- **Conditional Shortcodes:** Generate conditional logic shortcodes for dynamic content, supporting AND/OR groups (with [GF Advanced Conditional Shortcodes (by Gravity Wiz)](https://gravitywiz.com/gravity-forms-advanced-conditional-shortcode/)).
+- **Conditional Shortcodes:** Generate conditional logic shortcodes for dynamic content, supporting AND/OR groups (with [GF Advanced Conditional Shortcodes by Gravity Wiz](https://gravitywiz.com/gravity-forms-advanced-conditional-shortcode/)).
 - **User Information:** Output user details or user meta by key, with selectable output formatting.
 - **Login Form:** Create login forms with options for custom text, registration links, redirect, and more.
 - **Split Test:** Select multiple forms for built-in A/B testing; the shortcode will rotate which form is shown to each visitor.
 - **Entry Count:** Display the total, unread, starred, spam, or trashed entries for any form, with customizable number formatting.
 - **Entries Left:** Show the remaining entries before a form reaches its submission limit, great for limited offers and urgency.
-- **Progress Meter:** (Optional, requires [GF Progress Meter by GravityWiz](https://gravitywiz.com/gravity-forms-progress-meter/)) Visual meter showing progress toward a goal, supporting advanced tracking (payments, field values, etc.).
+- **Progress Meter:** (Optional, requires [GF Progress Meter by Gravity Wiz](https://gravitywiz.com/gravity-forms-progress-meter/)) Visual meter showing progress toward a goal, supporting advanced tracking (payments, field values, etc.).
 
 ## 📂 Project Structure
 ```

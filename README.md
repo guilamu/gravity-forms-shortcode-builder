@@ -7,7 +7,7 @@
 
 ## **✨ Features**
 
-- **Tabbed Builder Interface:** Each shortcode category is in its own tab for clarity.
+- **Tabbed Builder Interface:** Each shortcode category is in its own tab for clarity. Reorder tabs as you see fit.
 - **Core Form Display:** Build standard Gravity Forms embed shortcodes with title, description, AJAX, tab index, and field value options.
 - **Conditional Shortcodes:** Generate conditional logic shortcodes for dynamic content, supporting AND/OR groups (with GF Advanced Conditional Shortcodes).
 - **User Information:** Output user details or user meta by key, with selectable output formatting.

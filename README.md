@@ -1,3 +1,5 @@
+![Plugin logo](https://github.com/guilamu/gravity-forms-shortcode-builder/blob/main/logo.png)
+
 # **Gravity Forms Shortcode Builder**
 
 **Easily build and manage complex Gravity Forms shortcodes via a user-friendly interface in the Form Settings panel. Each shortcode type is available as a tab—ideal for sites using conditional display, entry stats, split tests, login forms, and more. Compatible with Gravity Wiz Advanced Conditional Shortcodes and Gravity Wiz Progress Meter, where available.**

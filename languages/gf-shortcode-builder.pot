@@ -1,0 +1,750 @@
+# Copyright (C) 2024 Guilamu
+# This file is distributed under the same license as the Gravity Forms Shortcode Builder plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Shortcode Builder 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-04 21:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/Plugin.php:121
+#: includes/Plugin.php:124
+#: includes/Plugin.php:321
+#: includes/Plugin.php:337
+#: includes/Plugin.php:361
+msgid "Shortcode Builder"
+msgstr ""
+
+#: includes/Plugin.php:123
+msgid "Insert shortcode"
+msgstr ""
+
+#: includes/Plugin.php:125
+msgid "Loading shortcode builder"
+msgstr ""
+
+#: includes/Plugin.php:127
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: includes/Plugin.php:129
+msgid "Unable to load shortcode builder accordion."
+msgstr ""
+
+#: includes/Plugin.php:130
+msgid "The shortcode builder could not be loaded. Check the console for details."
+msgstr ""
+
+#: includes/Plugin.php:131
+msgid "Please generate a shortcode first."
+msgstr ""
+
+#: includes/Plugin.php:132
+msgid "Unable to insert the shortcode. Please paste it manually."
+msgstr ""
+
+#: includes/Plugin.php:207
+#: includes/Plugin.php:227
+#: includes/Plugin.php:271
+msgid "Unauthorized"
+msgstr ""
+
+#: includes/Plugin.php:220
+msgid "Tab order saved"
+msgstr ""
+
+#: includes/Plugin.php:234
+msgid "Invalid parameters"
+msgstr ""
+
+#: includes/Plugin.php:240
+msgid "Form not found"
+msgstr ""
+
+#: includes/Plugin.php:244
+msgid "Tab not found"
+msgstr ""
+
+#: includes/Plugin.php:278
+msgid "Invalid tab"
+msgstr ""
+
+#: includes/Plugin.php:348
+msgid "Form not found."
+msgstr ""
+
+#: includes/Plugin.php:367
+msgid "Accordion order saved!"
+msgstr ""
+
+#: includes/Plugin.php:371
+msgid "Accordions Visibility"
+msgstr ""
+
+#: includes/Plugin.php:372
+msgid "Choose which accordions are available in the builder and notification modal."
+msgstr ""
+
+#: includes/Plugin.php:375
+#, php-format
+msgid "Enable %s accordion"
+msgstr ""
+
+#: includes/Plugin.php:410
+msgid "Drag to reorder"
+msgstr ""
+
+#: includes/Tabs/Conditional.php:13
+msgid "Conditional Shortcodes"
+msgstr ""
+
+#: includes/Tabs/CoreFormDisplay.php:11
+msgid "Core Form Display"
+msgstr ""
+
+#: includes/Tabs/EntriesLeft.php:13
+msgid "Entries Left"
+msgstr ""
+
+#: includes/Tabs/EntryCount.php:13
+msgid "Entry Count"
+msgstr ""
+
+#: includes/Tabs/Login.php:11
+msgid "Login Form"
+msgstr ""
+
+#: includes/Tabs/ProgressMeter.php:13
+msgid "Progress Meter"
+msgstr ""
+
+#: includes/Tabs/SplitTest.php:13
+msgid "Split Test"
+msgstr ""
+
+#: includes/Tabs/UserInfo.php:11
+msgid "User Information"
+msgstr ""
+
+#: views/tabs/conditional.php:7
+msgid "Select a field, an operator, and a value to generate your conditional shortcode."
+msgstr ""
+
+#: views/tabs/conditional.php:10
+msgid "Advanced Conditional Shortcodes is Active"
+msgstr ""
+
+#: views/tabs/conditional.php:11
+msgid "You're using the Advanced Conditional Shortcodes plugin. This builder creates basic conditional shortcodes. For advanced features (AND/OR relations, multiple conditions), please use the native builder in the plugin."
+msgstr ""
+
+#: views/tabs/conditional.php:14
+msgid "Go to Advanced Builder"
+msgstr ""
+
+#: views/tabs/conditional.php:20
+msgid "Relation"
+msgstr ""
+
+#: views/tabs/conditional.php:24
+msgid "Match ALL conditions (AND)"
+msgstr ""
+
+#: views/tabs/conditional.php:25
+msgid "Match ANY condition (OR)"
+msgstr ""
+
+#: views/tabs/conditional.php:29
+msgid "Field"
+msgstr ""
+
+#: views/tabs/conditional.php:35
+msgid "Select a Field"
+msgstr ""
+
+#: views/tabs/conditional.php:51
+msgid "Operator"
+msgstr ""
+
+#: views/tabs/conditional.php:58
+msgid "Match Regex (Advanced)"
+msgstr ""
+
+#: views/tabs/conditional.php:62
+msgid "Value"
+msgstr ""
+
+#: views/tabs/conditional.php:66
+msgid "Enter value..."
+msgstr ""
+
+#: views/tabs/conditional.php:68
+msgid "Remove Condition"
+msgstr ""
+
+#: views/tabs/conditional.php:73
+msgid "Add Condition"
+msgstr ""
+
+#: views/tabs/conditional.php:79
+#: views/tabs/core-form-display.php:81
+#: views/tabs/entry-count.php:63
+#: views/tabs/entries-left.php:69
+#: views/tabs/login.php:79
+#: views/tabs/progress-meter.php:112
+#: views/tabs/split-test.php:43
+#: views/tabs/user-info.php:77
+msgid "Generated Shortcode"
+msgstr ""
+
+#: views/tabs/conditional.php:87
+#: views/tabs/core-form-display.php:91
+#: views/tabs/entry-count.php:73
+#: views/tabs/entries-left.php:79
+#: views/tabs/login.php:89
+#: views/tabs/progress-meter.php:122
+#: views/tabs/split-test.php:53
+#: views/tabs/user-info.php:87
+msgid "Copied to clipboard!"
+msgstr ""
+
+#: views/tabs/core-form-display.php:7
+msgid "Build an embed shortcode to display your form on any page or post."
+msgstr ""
+
+#: views/tabs/core-form-display.php:12
+msgid "Form ID"
+msgstr ""
+
+#: views/tabs/core-form-display.php:16
+msgid "The ID of the current form."
+msgstr ""
+
+#: views/tabs/core-form-display.php:22
+msgid "Display Title"
+msgstr ""
+
+#: views/tabs/core-form-display.php:26
+#: views/tabs/core-form-display.php:39
+msgid "Show"
+msgstr ""
+
+#: views/tabs/core-form-display.php:27
+#: views/tabs/core-form-display.php:40
+msgid "Hide"
+msgstr ""
+
+#: views/tabs/core-form-display.php:29
+msgid "Whether to display the form title."
+msgstr ""
+
+#: views/tabs/core-form-display.php:35
+msgid "Display Description"
+msgstr ""
+
+#: views/tabs/core-form-display.php:42
+msgid "Whether to display the form description."
+msgstr ""
+
+#: views/tabs/core-form-display.php:48
+msgid "Enable AJAX"
+msgstr ""
+
+#: views/tabs/core-form-display.php:52
+msgid "Yes"
+msgstr ""
+
+#: views/tabs/core-form-display.php:53
+msgid "No"
+msgstr ""
+
+#: views/tabs/core-form-display.php:55
+msgid "Submit the form without reloading the page."
+msgstr ""
+
+#: views/tabs/core-form-display.php:61
+msgid "Tab Index (Optional)"
+msgstr ""
+
+#: views/tabs/core-form-display.php:64
+msgid "Leave blank for default"
+msgstr ""
+
+#: views/tabs/core-form-display.php:65
+msgid "Starting tab index for the form (not recommended for accessibility)."
+msgstr ""
+
+#: views/tabs/core-form-display.php:71
+msgid "Field Values (Optional)"
+msgstr ""
+
+#: views/tabs/core-form-display.php:74
+msgid "e.g., parameter1=value1&parameter2=value2"
+msgstr ""
+
+#: views/tabs/core-form-display.php:75
+msgid "Dynamically populate form fields using URL parameter format."
+msgstr ""
+
+#: views/tabs/entry-count.php:7
+msgid "Display the number of entries submitted for a form. Great for showing social proof or interest levels."
+msgstr ""
+
+#: views/tabs/entry-count.php:12
+#: views/tabs/progress-meter.php:12
+msgid "Select Form"
+msgstr ""
+
+#: views/tabs/entry-count.php:16
+#: views/tabs/entries-left.php:16
+#: views/tabs/progress-meter.php:16
+#: views/tabs/split-test.php:18
+msgid "Select a form"
+msgstr ""
+
+#: views/tabs/entry-count.php:22
+msgid "The form for which you want to display the entry count."
+msgstr ""
+
+#: views/tabs/entry-count.php:29
+msgid "Entry Status"
+msgstr ""
+
+#: views/tabs/entry-count.php:33
+msgid "Total (All entries)"
+msgstr ""
+
+#: views/tabs/entry-count.php:34
+msgid "Unread"
+msgstr ""
+
+#: views/tabs/entry-count.php:35
+msgid "Starred"
+msgstr ""
+
+#: views/tabs/entry-count.php:36
+msgid "Spam"
+msgstr ""
+
+#: views/tabs/entry-count.php:37
+msgid "Trash"
+msgstr ""
+
+#: views/tabs/entry-count.php:39
+msgid "Type of entries to count (defaults to \"total\")."
+msgstr ""
+
+#: views/tabs/entry-count.php:46
+msgid "Number Format"
+msgstr ""
+
+#: views/tabs/entry-count.php:50
+msgid "Comma (e.g., 1,234)"
+msgstr ""
+
+#: views/tabs/entry-count.php:51
+msgid "Decimal (e.g., 1.234)"
+msgstr ""
+
+#: views/tabs/entry-count.php:53
+msgid "How to format the displayed number."
+msgstr ""
+
+#: views/tabs/entry-count.php:79
+msgid "Usage Examples"
+msgstr ""
+
+#: views/tabs/entry-count.php:81
+msgid "Show social proof: \"Join 1,234 other subscribers!\""
+msgstr ""
+
+#: views/tabs/entry-count.php:82
+msgid "Display event registrations: \"523 people registered\""
+msgstr ""
+
+#: views/tabs/entry-count.php:83
+msgid "Track contest entries: \"15,678 entries submitted\""
+msgstr ""
+
+#: views/tabs/entry-count.php:84
+msgid "Monitor form engagement across your site"
+msgstr ""
+
+#: views/tabs/entries-left.php:7
+msgid "Display the number of entries remaining before a form reaches its entry limit. Perfect for limited offers, event registrations, or contests."
+msgstr ""
+
+#: views/tabs/entries-left.php:11
+msgid "Entry Limits Not Enabled"
+msgstr ""
+
+#: views/tabs/entries-left.php:12
+msgid "The current form does not have entry limits enabled. To use the Entries Left shortcode, you need to enable \"Limit number of entries\" in Form Settings > Restrictions."
+msgstr ""
+
+#: views/tabs/entries-left.php:22
+msgid "The form for which you want to display entries remaining. Forms without entry limits will show unlimited entries."
+msgstr ""
+
+#: views/tabs/entries-left.php:29
+msgid "(No limit set)"
+msgstr ""
+
+#: views/tabs/entries-left.php:48
+msgid "How to format the displayed number (e.g., comma for 1,234 or decimal for 1.234)."
+msgstr ""
+
+#: views/tabs/entries-left.php:85
+msgid "Create urgency: \"Only 23 spots left! Register now!\""
+msgstr ""
+
+#: views/tabs/entries-left.php:86
+msgid "Limited offers: \"15 early bird tickets remaining\""
+msgstr ""
+
+#: views/tabs/entries-left.php:87
+msgid "Contest entries: \"47 entries left before we close submissions\""
+msgstr ""
+
+#: views/tabs/entries-left.php:88
+msgid "Workshop signups: \"3 seats available for this workshop\""
+msgstr ""
+
+#: views/tabs/entries-left.php:92
+msgid "How to Enable Entry Limits"
+msgstr ""
+
+#: views/tabs/entries-left.php:94
+msgid "Go to your form settings"
+msgstr ""
+
+#: views/tabs/entries-left.php:95
+msgid "Click on \"Restrictions\" in the left sidebar"
+msgstr ""
+
+#: views/tabs/entries-left.php:96
+msgid "Enable \"Limit number of entries\""
+msgstr ""
+
+#: views/tabs/entries-left.php:97
+msgid "Set your desired entry limit"
+msgstr ""
+
+#: views/tabs/login.php:7
+msgid "Display a custom login form on any page or post. Perfect for creating branded login experiences."
+msgstr ""
+
+#: views/tabs/login.php:12
+msgid "Display Title (Optional)"
+msgstr ""
+
+#: views/tabs/login.php:19
+msgid "Whether to display the login form title."
+msgstr ""
+
+#: views/tabs/login.php:25
+msgid "Display Description (Optional)"
+msgstr ""
+
+#: views/tabs/login.php:32
+msgid "Whether to display the login form description."
+msgstr ""
+
+#: views/tabs/login.php:38
+msgid "Logged In Message"
+msgstr ""
+
+#: views/tabs/login.php:42
+msgid "e.g., Welcome back! You are already logged in."
+msgstr ""
+
+#: views/tabs/login.php:43
+msgid "Message displayed to users who are already logged in."
+msgstr ""
+
+#: views/tabs/login.php:48
+msgid "Registration Link Text"
+msgstr ""
+
+#: views/tabs/login.php:52
+msgid "e.g., Register Now"
+msgstr ""
+
+#: views/tabs/login.php:53
+msgid "Text for the registration link (defaults to \"Register\")."
+msgstr ""
+
+#: views/tabs/login.php:58
+msgid "Forgot Password Link Text"
+msgstr ""
+
+#: views/tabs/login.php:62
+msgid "e.g., Forgot Password?"
+msgstr ""
+
+#: views/tabs/login.php:63
+msgid "Text for the forgot password link (defaults to \"Forgot Password\")."
+msgstr ""
+
+#: views/tabs/login.php:68
+msgid "Redirect URL (Optional)"
+msgstr ""
+
+#: views/tabs/login.php:72
+msgid "e.g., https://example.com/dashboard"
+msgstr ""
+
+#: views/tabs/login.php:73
+msgid "URL to redirect users after successful login. Leave blank to stay on the current page."
+msgstr ""
+
+#: views/tabs/progress-meter.php:7
+msgid "Display a visual progress meter showing progression towards a goal based on form entries. Perfect for fundraising campaigns, event registrations, or any goal-based tracking."
+msgstr ""
+
+#: views/tabs/progress-meter.php:23
+msgid "The form to track progress for."
+msgstr ""
+
+#: views/tabs/progress-meter.php:29
+msgid "Goal"
+msgstr ""
+
+#: views/tabs/progress-meter.php:33
+msgid "The target number you want to reach (e.g., 1000 entries or $5000 raised)."
+msgstr ""
+
+#: views/tabs/progress-meter.php:39
+msgid "Field to Track (Optional)"
+msgstr ""
+
+#: views/tabs/progress-meter.php:43
+msgid "Count entries (default)"
+msgstr ""
+
+#: views/tabs/progress-meter.php:44
+msgid "Payment Amount (sum of payments)"
+msgstr ""
+
+#: views/tabs/progress-meter.php:45
+msgid "Custom Field (enter field ID)"
+msgstr ""
+
+#: views/tabs/progress-meter.php:47
+msgid "What to track: entry count, payment amounts, or a specific field value."
+msgstr ""
+
+#: views/tabs/progress-meter.php:53
+msgid "Custom Field ID"
+msgstr ""
+
+#: views/tabs/progress-meter.php:57
+msgid "Enter the field ID to sum values from (e.g., a number field)."
+msgstr ""
+
+#: views/tabs/progress-meter.php:63
+msgid "Entry Status (Optional)"
+msgstr ""
+
+#: views/tabs/progress-meter.php:70
+msgid "Which entries to include in the count."
+msgstr ""
+
+#: views/tabs/progress-meter.php:76
+msgid "Starting Count (Optional)"
+msgstr ""
+
+#: views/tabs/progress-meter.php:80
+msgid "Leave blank to start from 0"
+msgstr ""
+
+#: views/tabs/progress-meter.php:81
+msgid "Set a starting count (useful if you want to offset initial progress)."
+msgstr ""
+
+#: views/tabs/progress-meter.php:87
+msgid "Count Label"
+msgstr ""
+
+#: views/tabs/progress-meter.php:91
+msgid "e.g., %s donations or Raised $%s"
+msgstr ""
+
+#: views/tabs/progress-meter.php:92
+msgid "%s submissions"
+msgstr ""
+
+#: views/tabs/progress-meter.php:93
+msgid "Label for the current count. Use %s as placeholder for the number."
+msgstr ""
+
+#: views/tabs/progress-meter.php:99
+msgid "Goal Label"
+msgstr ""
+
+#: views/tabs/progress-meter.php:103
+msgid "e.g., Goal: %s or Target $%s"
+msgstr ""
+
+#: views/tabs/progress-meter.php:104
+msgid "%s goal"
+msgstr ""
+
+#: views/tabs/progress-meter.php:105
+msgid "Label for the goal. Use %s as placeholder for the goal number."
+msgstr ""
+
+#: views/tabs/progress-meter.php:128
+msgid "Fundraising: Track donations with payment_amount field"
+msgstr ""
+
+#: views/tabs/progress-meter.php:129
+msgid "Event registrations: Count total registrations towards capacity"
+msgstr ""
+
+#: views/tabs/progress-meter.php:130
+msgid "Petition signatures: Track progress towards signature goal"
+msgstr ""
+
+#: views/tabs/progress-meter.php:131
+msgid "Contest entries: Show how many people have entered"
+msgstr ""
+
+#: views/tabs/split-test.php:7
+msgid "Test different versions of your forms to see which converts better. Select 2 or more forms to randomly display to visitors."
+msgstr ""
+
+#: views/tabs/split-test.php:12
+msgid "Forms to Test"
+msgstr ""
+
+#: views/tabs/split-test.php:28
+msgid "Remove"
+msgstr ""
+
+#: views/tabs/split-test.php:34
+msgid "Add Another Form"
+msgstr ""
+
+#: views/tabs/split-test.php:37
+msgid "Add at least 2 forms to run a split test. Each form will be randomly displayed to visitors."
+msgstr ""
+
+#: views/tabs/split-test.php:59
+msgid "How Split Testing Works"
+msgstr ""
+
+#: views/tabs/split-test.php:61
+msgid "Each visitor will be randomly shown one of the selected forms"
+msgstr ""
+
+#: views/tabs/split-test.php:62
+msgid "Gravity Forms tracks views and conversions for each form"
+msgstr ""
+
+#: views/tabs/split-test.php:63
+msgid "Check your form entries to see which version performs better"
+msgstr ""
+
+#: views/tabs/split-test.php:64
+msgid "The more traffic you have, the more accurate your results will be"
+msgstr ""
+
+#: views/tabs/user-info.php:7
+msgid "Display information about the current user or a specific user on your page or post."
+msgstr ""
+
+#: views/tabs/user-info.php:12
+msgid "User ID (Optional)"
+msgstr ""
+
+#: views/tabs/user-info.php:16
+msgid "The ID of the user to display information for. Leave blank to display info for the currently logged-in user."
+msgstr ""
+
+#: views/tabs/user-info.php:22
+msgid "User Meta Key"
+msgstr ""
+
+#: views/tabs/user-info.php:26
+msgid "Select a user meta key"
+msgstr ""
+
+#: views/tabs/user-info.php:28
+msgid "Username (user_login)"
+msgstr ""
+
+#: views/tabs/user-info.php:29
+msgid "Email (user_email)"
+msgstr ""
+
+#: views/tabs/user-info.php:30
+msgid "Display Name (display_name)"
+msgstr ""
+
+#: views/tabs/user-info.php:31
+msgid "Nice Name (user_nicename)"
+msgstr ""
+
+#: views/tabs/user-info.php:34
+msgid "Nickname (nickname)"
+msgstr ""
+
+#: views/tabs/user-info.php:35
+msgid "First Name (first_name)"
+msgstr ""
+
+#: views/tabs/user-info.php:36
+msgid "Last Name (last_name)"
+msgstr ""
+
+#: views/tabs/user-info.php:37
+msgid "Biographical Info (description)"
+msgstr ""
+
+#: views/tabs/user-info.php:40
+msgid "Website (user_url)"
+msgstr ""
+
+#: views/tabs/user-info.php:43
+msgid "Registration Date (user_registered)"
+msgstr ""
+
+#: views/tabs/user-info.php:44
+#: views/tabs/user-info.php:53
+msgid "Custom Meta Key"
+msgstr ""
+
+#: views/tabs/user-info.php:47
+msgid "The user meta key to retrieve (e.g., nickname, first_name, last_name)."
+msgstr ""
+
+#: views/tabs/user-info.php:57
+msgid "Enter the custom user meta key you want to retrieve."
+msgstr ""
+
+#: views/tabs/user-info.php:63
+msgid "Output Format"
+msgstr ""
+
+#: views/tabs/user-info.php:67
+msgid "Raw (JSON)"
+msgstr ""
+
+#: views/tabs/user-info.php:68
+msgid "CSV (Comma-Separated)"
+msgstr ""
+
+#: views/tabs/user-info.php:69
+msgid "List (Formatted HTML)"
+msgstr ""
+
+#: views/tabs/user-info.php:71
+msgid "How the data should be formatted when displayed."
+msgstr ""

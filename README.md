@@ -64,7 +64,7 @@ gravity-forms-shortcode-builder/
 
 ---
 
-## **🆕 What’s New in 1.1**
+## **🆕 What’s New in 1.1 (12/04/2025)**
 
 - Added a modal experience inside the Gravity Forms notification editor with a dedicated toolbar button and direct shortcode insertion.
 - Restricted notification modal tabs to the most relevant shortcodes (Conditional, User Information, Entry Count, Entries Left) for a streamlined workflow.

@@ -23,6 +23,13 @@
 ```
 gravity-forms-shortcode-builder/
 ├── gf-shortcode-builder.php
+├── assets/
+│ ├── css/
+│ │ ├── admin-builder.css
+│ │ └── admin-modal.css
+│ └── js/
+│   ├── admin-builder.js
+│   └── admin-modal.js
 ├── tabs/
 │ ├── class-gfsb-tab-core-form-display.php
 │ ├── class-gfsb-tab-conditional.php
@@ -32,11 +39,16 @@ gravity-forms-shortcode-builder/
 │ ├── class-gfsb-tab-entry-count.php
 │ ├── class-gfsb-tab-entries-left.php
 │ └── class-gfsb-tab-progress-meter.php
+├── languages/
 └── README.md
 ```
 **`gf-shortcode-builder.php`**: The main plugin loader, menu integration, tab registration, and controller.
 
+**`assets/`**: CSS and JavaScript files for the builder page and notification modal.
+
 **`tabs/`**: Each PHP class file handles rendering and logic for a specific tab (shortcode type).
+
+**`languages/`**: Translation files (.pot, .po, .mo) for internationalization.
 
 ## **✅ Requirements**
 
@@ -63,6 +75,10 @@ gravity-forms-shortcode-builder/
 - Copy the auto-generated shortcode and insert it where needed in confirmations, posts, pages, block patterns, etc.
 
 ---
+
+## **🆕 Version 1.2.0 (12/04/2025)**
+
+- Refactored all inline CSS and JavaScript to external asset files for improved maintainability, browser caching, and code organization.
 
 ## **🆕 Version 1.1.1 (12/04/2025)**
 

@@ -1,7 +1,9 @@
 # **Gravity Forms Shortcode Builder**
+
 <p align="center">
   <img src="logo.png" alt="Gravity Conditional Compass Logo" width="400">
 </p>
+
 **Easily build and manage complex Gravity Forms shortcodes via a user-friendly interface in the Form Settings panel. Each shortcode type is available as a tab—ideal for sites using conditional display, entry stats, split tests, login forms, and more. Compatible with Gravity Wiz Advanced Conditional Shortcodes and Gravity Wiz Progress Meter, where available.**
 
 ![Plugin Screenshot](https://github.com/guilamu/gravity-forms-shortcode-builder/blob/main/screenshot.jpg)

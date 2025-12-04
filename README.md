@@ -26,33 +26,38 @@
 ## Project Structure
 ```
 gravity-forms-shortcode-builder/
-├── gf-shortcode-builder.php
-├── assets/
+├── gf-shortcode-builder.php        <-- Main plugin file, autoloader, and bootstrap
+├── assets/                         <-- CSS and JS assets
 │ ├── css/
-│ │ ├── admin-builder.css
-│ │ └── admin-modal.css
+│ │ ├── admin-builder.css           <-- Styles for the builder interface
+│ │ └── admin-modal.css             <-- Styles for the notification modal
 │ └── js/
-│   ├── admin-builder.js
-│   └── admin-modal.js
-├── tabs/
-│ ├── class-gfsb-tab-core-form-display.php
-│ ├── class-gfsb-tab-conditional.php
-│ ├── class-gfsb-tab-user-info.php
-│ ├── class-gfsb-tab-login.php
-│ ├── class-gfsb-tab-split-test.php
-│ ├── class-gfsb-tab-entry-count.php
-│ ├── class-gfsb-tab-entries-left.php
-│ └── class-gfsb-tab-progress-meter.php
-├── languages/
-└── README.md
+│   ├── admin-builder.js            <-- Logic for drag-and-drop and UI interactions
+│   └── admin-modal.js              <-- Logic for the modal and shortcode insertion
+├── includes/                       <-- PHP classes (logic)
+│ ├── Plugin.php                    <-- Main plugin class (Singleton)
+│ └── Tabs/                         <-- Individual tab classes
+│   ├── CoreFormDisplay.php         <-- Logic for Core Form Display tab
+│   ├── Conditional.php             <-- Logic for Conditional tab
+│   ├── UserInfo.php                <-- Logic for User Info tab
+│   ├── Login.php                   <-- Logic for Login tab
+│   ├── SplitTest.php               <-- Logic for Split Test tab
+│   ├── EntryCount.php              <-- Logic for Entry Count tab
+│   ├── EntriesLeft.php             <-- Logic for Entries Left tab
+│   └── ProgressMeter.php           <-- Logic for Progress Meter tab
+├── views/                          <-- HTML templates (presentation)
+│ └── tabs/                         <-- View files for each tab
+│   ├── core-form-display.php       <-- Template for Core Form Display
+│   ├── conditional.php             <-- Template for Conditional
+│   ├── user-info.php               <-- Template for User Info
+│   ├── login.php                   <-- Template for Login
+│   ├── split-test.php              <-- Template for Split Test
+│   ├── entry-count.php             <-- Template for Entry Count
+│   ├── entries-left.php            <-- Template for Entries Left
+│   └── progress-meter.php          <-- Template for Progress Meter
+├── languages/                      <-- Translation files
+└── README.md                       <-- Plugin documentation
 ```
-**`gf-shortcode-builder.php`**: The main plugin loader, menu integration, tab registration, and controller.
-
-**`assets/`**: CSS and JavaScript files for the builder page and notification modal.
-
-**`tabs/`**: Each PHP class file handles rendering and logic for a specific tab (shortcode type).
-
-**`languages/`**: Translation files (.pot, .po, .mo) for internationalization.
 
 ## **Requirements**
 
@@ -80,6 +85,13 @@ gravity-forms-shortcode-builder/
 
 ---
 ## **Changelog**
+### **Version 1.3.0 (12/04/2025)**
+- **Refactoring:** Major codebase restructuring for better maintainability and security.
+- **Namespaces:** Adopted `GFSB` namespace for all classes.
+- **Separation of Concerns:** Separated PHP logic (`includes/`) from HTML views (`views/`).
+- **Security:** Enhanced AJAX security with specific capability checks and input validation.
+- **Autoloader:** Implemented a custom autoloader for better class loading performance.
+
 ### **Version 1.2.0 (12/04/2025)**
 
 - Added a logo

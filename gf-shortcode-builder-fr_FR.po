@@ -1,0 +1,734 @@
+# French translation for Gravity Forms Shortcode Builder
+# Copyright (C) 2024 Guilamu
+# This file is distributed under the same license as the Gravity Forms Shortcode Builder plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Shortcode Builder 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-04 21:53+0000\n"
+"PO-Revision-Date: 2025-12-04 21:59+0100\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: includes/Plugin.php:121 includes/Plugin.php:124 includes/Plugin.php:321
+#: includes/Plugin.php:337 includes/Plugin.php:361
+msgid "Shortcode Builder"
+msgstr "Shortcode Builder"
+
+#: includes/Plugin.php:123
+msgid "Insert shortcode"
+msgstr "Insérer le shortcode"
+
+#: includes/Plugin.php:125
+msgid "Loading shortcode builder"
+msgstr "Chargement du Shortcode Builder"
+
+#: includes/Plugin.php:127
+msgid "Copy to Clipboard"
+msgstr "Copier dans le presse-papiers"
+
+#: includes/Plugin.php:129
+msgid "Unable to load shortcode builder accordion."
+msgstr "Impossible de charger l'accordéon du Builder."
+
+#: includes/Plugin.php:130
+msgid "The shortcode builder could not be loaded. Check the console for details."
+msgstr "Le Shortcode Builder n'a pas pu être chargé. Consultez la console pour plus de détails."
+
+#: includes/Plugin.php:131
+msgid "Please generate a shortcode first."
+msgstr "Veuillez d'abord générer un shortcode."
+
+#: includes/Plugin.php:132
+msgid "Unable to insert the shortcode. Please paste it manually."
+msgstr "Impossible d'insérer le shortcode. Veuillez le coller manuellement."
+
+#: includes/Plugin.php:207 includes/Plugin.php:227 includes/Plugin.php:271
+msgid "Unauthorized"
+msgstr "Non autorisé"
+
+#: includes/Plugin.php:220
+msgid "Tab order saved"
+msgstr "Ordre des sections sauvegardé"
+
+#: includes/Plugin.php:234
+msgid "Invalid parameters"
+msgstr "Paramètres invalides"
+
+#: includes/Plugin.php:240
+msgid "Form not found"
+msgstr "Formulaire introuvable"
+
+#: includes/Plugin.php:244
+msgid "Tab not found"
+msgstr "Section introuvable"
+
+#: includes/Plugin.php:278
+msgid "Invalid tab"
+msgstr "Section invalide"
+
+#: includes/Plugin.php:348
+msgid "Form not found."
+msgstr "Formulaire introuvable."
+
+#: includes/Plugin.php:367
+msgid "Accordion order saved!"
+msgstr "Ordre des sections sauvegardé !"
+
+#: includes/Plugin.php:371
+msgid "Accordions Visibility"
+msgstr "Visibilité des accordéons"
+
+#: includes/Plugin.php:372
+msgid "Choose which accordions are available in the builder and notification modal."
+msgstr "Choisissez les accordéons disponibles dans le builder et la modale de notification."
+
+#: includes/Plugin.php:375
+#, php-format
+msgid "Enable %s accordion"
+msgstr "Activer l'accordéon %s"
+
+#: includes/Plugin.php:410
+msgid "Drag to reorder"
+msgstr "Glisser pour réorganiser"
+
+#: includes/Tabs/Conditional.php:13
+msgid "Conditional Shortcodes"
+msgstr "Shortcodes conditionnels"
+
+#: includes/Tabs/CoreFormDisplay.php:11
+msgid "Core Form Display"
+msgstr "Affichage du formulaire"
+
+#: includes/Tabs/EntriesLeft.php:13
+msgid "Entries Left"
+msgstr "Entrées restantes"
+
+#: includes/Tabs/EntryCount.php:13
+msgid "Entry Count"
+msgstr "Nombre d'entrées"
+
+#: includes/Tabs/Login.php:11
+msgid "Login Form"
+msgstr "Formulaire de connexion"
+
+#: includes/Tabs/ProgressMeter.php:13
+msgid "Progress Meter"
+msgstr "Indicateur de progression"
+
+#: includes/Tabs/SplitTest.php:13
+msgid "Split Test"
+msgstr "Test A/B"
+
+#: includes/Tabs/UserInfo.php:11
+msgid "User Information"
+msgstr "Informations utilisateur"
+
+#: views/tabs/conditional.php:7
+msgid "Select a field, an operator, and a value to generate your conditional shortcode."
+msgstr "Sélectionnez un champ, un opérateur et une valeur pour générer votre shortcode conditionnel."
+
+#: views/tabs/conditional.php:10
+msgid "Advanced Conditional Shortcodes is Active"
+msgstr "Advanced Conditional Shortcodes est actif"
+
+#: views/tabs/conditional.php:11
+msgid "You're using the Advanced Conditional Shortcodes plugin. This builder creates basic conditional shortcodes. For advanced features (AND/OR relations, multiple conditions), please use the native builder in the plugin."
+msgstr "Vous utilisez le plugin Advanced Conditional Shortcodes. Ce builder crée des shortcodes conditionnels de base. Pour les fonctionnalités avancées (relations ET/OU, conditions multiples), utilisez le builder natif du plugin."
+
+#: views/tabs/conditional.php:14
+msgid "Go to Advanced Builder"
+msgstr "Aller au Builder avancé"
+
+#: views/tabs/conditional.php:20
+msgid "Relation"
+msgstr "Relation"
+
+#: views/tabs/conditional.php:24
+msgid "Match ALL conditions (AND)"
+msgstr "Correspondre à TOUTES les conditions (ET)"
+
+#: views/tabs/conditional.php:25
+msgid "Match ANY condition (OR)"
+msgstr "Correspondre à N'IMPORTE QUELLE condition (OU)"
+
+#: views/tabs/conditional.php:29
+msgid "Field"
+msgstr "Champ"
+
+#: views/tabs/conditional.php:35
+msgid "Select a Field"
+msgstr "Sélectionner un champ"
+
+#: views/tabs/conditional.php:51
+msgid "Operator"
+msgstr "Opérateur"
+
+#: views/tabs/conditional.php:58
+msgid "Match Regex (Advanced)"
+msgstr "Correspondance Regex (Avancé)"
+
+#: views/tabs/conditional.php:62
+msgid "Value"
+msgstr "Valeur"
+
+#: views/tabs/conditional.php:66
+msgid "Enter value..."
+msgstr "Entrer une valeur..."
+
+#: views/tabs/conditional.php:68
+msgid "Remove Condition"
+msgstr "Supprimer la condition"
+
+#: views/tabs/conditional.php:73
+msgid "Add Condition"
+msgstr "Ajouter une condition"
+
+#: views/tabs/conditional.php:79 views/tabs/core-form-display.php:81
+#: views/tabs/entry-count.php:63 views/tabs/entries-left.php:69
+#: views/tabs/login.php:79 views/tabs/progress-meter.php:112
+#: views/tabs/split-test.php:43 views/tabs/user-info.php:77
+msgid "Generated Shortcode"
+msgstr "Shortcode généré"
+
+#: views/tabs/conditional.php:87 views/tabs/core-form-display.php:91
+#: views/tabs/entry-count.php:73 views/tabs/entries-left.php:79
+#: views/tabs/login.php:89 views/tabs/progress-meter.php:122
+#: views/tabs/split-test.php:53 views/tabs/user-info.php:87
+msgid "Copied to clipboard!"
+msgstr "Copié dans le presse-papiers !"
+
+#: views/tabs/core-form-display.php:7
+msgid "Build an embed shortcode to display your form on any page or post."
+msgstr "Construisez un shortcode pour afficher votre formulaire sur n'importe quelle page ou article."
+
+#: views/tabs/core-form-display.php:12
+msgid "Form ID"
+msgstr "ID du formulaire"
+
+#: views/tabs/core-form-display.php:16
+msgid "The ID of the current form."
+msgstr "L'ID du formulaire actuel."
+
+#: views/tabs/core-form-display.php:22
+msgid "Display Title"
+msgstr "Afficher le titre"
+
+#: views/tabs/core-form-display.php:26 views/tabs/core-form-display.php:39
+msgid "Show"
+msgstr "Afficher"
+
+#: views/tabs/core-form-display.php:27 views/tabs/core-form-display.php:40
+msgid "Hide"
+msgstr "Masquer"
+
+#: views/tabs/core-form-display.php:29
+msgid "Whether to display the form title."
+msgstr "Afficher ou non le titre du formulaire."
+
+#: views/tabs/core-form-display.php:35
+msgid "Display Description"
+msgstr "Afficher la description"
+
+#: views/tabs/core-form-display.php:42
+msgid "Whether to display the form description."
+msgstr "Afficher ou non la description du formulaire."
+
+#: views/tabs/core-form-display.php:48
+msgid "Enable AJAX"
+msgstr "Activer AJAX"
+
+#: views/tabs/core-form-display.php:52
+msgid "Yes"
+msgstr "Oui"
+
+#: views/tabs/core-form-display.php:53
+msgid "No"
+msgstr "Non"
+
+#: views/tabs/core-form-display.php:55
+msgid "Submit the form without reloading the page."
+msgstr "Soumettre le formulaire sans recharger la page."
+
+#: views/tabs/core-form-display.php:61
+msgid "Tab Index (Optional)"
+msgstr "Index de tabulation (Optionnel)"
+
+#: views/tabs/core-form-display.php:64
+msgid "Leave blank for default"
+msgstr "Laisser vide pour la valeur par défaut"
+
+#: views/tabs/core-form-display.php:65
+msgid "Starting tab index for the form (not recommended for accessibility)."
+msgstr "Index de tabulation de départ pour le formulaire (non recommandé pour l'accessibilité)."
+
+#: views/tabs/core-form-display.php:71
+msgid "Field Values (Optional)"
+msgstr "Valeurs des champs (Optionnel)"
+
+#: views/tabs/core-form-display.php:74
+msgid "e.g., parameter1=value1&parameter2=value2"
+msgstr "ex. parametre1=valeur1&parametre2=valeur2"
+
+#: views/tabs/core-form-display.php:75
+msgid "Dynamically populate form fields using URL parameter format."
+msgstr "Pré-remplir dynamiquement les champs du formulaire en utilisant le format des paramètres URL."
+
+#: views/tabs/entry-count.php:7
+msgid "Display the number of entries submitted for a form. Great for showing social proof or interest levels."
+msgstr "Affichez le nombre d'entrées soumises pour un formulaire. Idéal pour montrer une preuve sociale ou le niveau d'intérêt."
+
+#: views/tabs/entry-count.php:12 views/tabs/progress-meter.php:12
+msgid "Select Form"
+msgstr "Sélectionner un formulaire"
+
+#: views/tabs/entry-count.php:16 views/tabs/entries-left.php:16
+#: views/tabs/progress-meter.php:16 views/tabs/split-test.php:18
+msgid "Select a form"
+msgstr "Sélectionner un formulaire"
+
+#: views/tabs/entry-count.php:22
+msgid "The form for which you want to display the entry count."
+msgstr "Le formulaire pour lequel vous souhaitez afficher le nombre d'entrées."
+
+#: views/tabs/entry-count.php:29
+msgid "Entry Status"
+msgstr "Statut des entrées"
+
+#: views/tabs/entry-count.php:33
+msgid "Total (All entries)"
+msgstr "Total (Toutes les entrées)"
+
+#: views/tabs/entry-count.php:34
+msgid "Unread"
+msgstr "Non lu"
+
+#: views/tabs/entry-count.php:35
+msgid "Starred"
+msgstr "Favoris"
+
+#: views/tabs/entry-count.php:36
+msgid "Spam"
+msgstr "Spam"
+
+#: views/tabs/entry-count.php:37
+msgid "Trash"
+msgstr "Corbeille"
+
+#: views/tabs/entry-count.php:39
+msgid "Type of entries to count (defaults to \"total\")."
+msgstr "Type d'entrées à compter (par défaut « total »)."
+
+#: views/tabs/entry-count.php:46
+msgid "Number Format"
+msgstr "Format du nombre"
+
+#: views/tabs/entry-count.php:50
+msgid "Comma (e.g., 1,234)"
+msgstr "Virgule (ex. 1 234)"
+
+#: views/tabs/entry-count.php:51
+msgid "Decimal (e.g., 1.234)"
+msgstr "Décimal (ex. 1.234)"
+
+#: views/tabs/entry-count.php:53
+msgid "How to format the displayed number."
+msgstr "Comment formater le nombre affiché."
+
+#: views/tabs/entry-count.php:79
+msgid "Usage Examples"
+msgstr "Exemples d'utilisation"
+
+#: views/tabs/entry-count.php:81
+msgid "Show social proof: \"Join 1,234 other subscribers!\""
+msgstr "Montrer une preuve sociale : « Rejoignez 1 234 autres abonnés ! »"
+
+#: views/tabs/entry-count.php:82
+msgid "Display event registrations: \"523 people registered\""
+msgstr "Afficher les inscriptions à un événement : « 523 personnes inscrites »"
+
+#: views/tabs/entry-count.php:83
+msgid "Track contest entries: \"15,678 entries submitted\""
+msgstr "Suivre les participations au concours : « 15 678 participations soumises »"
+
+#: views/tabs/entry-count.php:84
+msgid "Monitor form engagement across your site"
+msgstr "Surveillez l'engagement de vos formulaires sur votre site"
+
+#: views/tabs/entries-left.php:7
+msgid "Display the number of entries remaining before a form reaches its entry limit. Perfect for limited offers, event registrations, or contests."
+msgstr "Affichez le nombre d'entrées restantes avant qu'un formulaire n'atteigne sa limite. Parfait pour les offres limitées, les inscriptions à des événements ou les concours."
+
+#: views/tabs/entries-left.php:11
+msgid "Entry Limits Not Enabled"
+msgstr "Limites d'entrées non activées"
+
+#: views/tabs/entries-left.php:12
+msgid "The current form does not have entry limits enabled. To use the Entries Left shortcode, you need to enable \"Limit number of entries\" in Form Settings > Restrictions."
+msgstr "Le formulaire actuel n'a pas de limites d'entrées activées. Pour utiliser le shortcode Entrées Restantes, vous devez activer « Limiter le nombre d'entrées » dans Paramètres du formulaire > Restrictions."
+
+#: views/tabs/entries-left.php:22
+msgid "The form for which you want to display entries remaining. Forms without entry limits will show unlimited entries."
+msgstr "Le formulaire pour lequel vous souhaitez afficher les entrées restantes. Les formulaires sans limite d'entrées afficheront des entrées illimitées."
+
+#: views/tabs/entries-left.php:29
+msgid "(No limit set)"
+msgstr "(Aucune limite définie)"
+
+#: views/tabs/entries-left.php:48
+msgid "How to format the displayed number (e.g., comma for 1,234 or decimal for 1.234)."
+msgstr "Comment formater le nombre affiché (ex. virgule pour 1 234 ou point pour 1.234)."
+
+#: views/tabs/entries-left.php:85
+msgid "Create urgency: \"Only 23 spots left! Register now!\""
+msgstr "Créer l'urgence : « Plus que 23 places ! Inscrivez-vous maintenant ! »"
+
+#: views/tabs/entries-left.php:86
+msgid "Limited offers: \"15 early bird tickets remaining\""
+msgstr "Offres limitées : « 15 billets early bird restants »"
+
+#: views/tabs/entries-left.php:87
+msgid "Contest entries: \"47 entries left before we close submissions\""
+msgstr "Participations au concours : « 47 participations restantes avant la clôture »"
+
+#: views/tabs/entries-left.php:88
+msgid "Workshop signups: \"3 seats available for this workshop\""
+msgstr "Inscriptions aux ateliers : « 3 places disponibles pour cet atelier »"
+
+#: views/tabs/entries-left.php:92
+msgid "How to Enable Entry Limits"
+msgstr "Comment activer les limites d'entrées"
+
+#: views/tabs/entries-left.php:94
+msgid "Go to your form settings"
+msgstr "Allez dans les paramètres de votre formulaire"
+
+#: views/tabs/entries-left.php:95
+msgid "Click on \"Restrictions\" in the left sidebar"
+msgstr "Cliquez sur « Restrictions » dans la barre latérale gauche"
+
+#: views/tabs/entries-left.php:96
+msgid "Enable \"Limit number of entries\""
+msgstr "Activez « Limiter le nombre d'entrées »"
+
+#: views/tabs/entries-left.php:97
+msgid "Set your desired entry limit"
+msgstr "Définissez la limite d'entrées souhaitée"
+
+#: views/tabs/login.php:7
+msgid "Display a custom login form on any page or post. Perfect for creating branded login experiences."
+msgstr "Affichez un formulaire de connexion personnalisé sur n'importe quelle page ou article. Parfait pour créer des expériences de connexion personnalisées."
+
+#: views/tabs/login.php:12
+msgid "Display Title (Optional)"
+msgstr "Afficher le titre (Optionnel)"
+
+#: views/tabs/login.php:19
+msgid "Whether to display the login form title."
+msgstr "Afficher ou non le titre du formulaire de connexion."
+
+#: views/tabs/login.php:25
+msgid "Display Description (Optional)"
+msgstr "Afficher la description (Optionnel)"
+
+#: views/tabs/login.php:32
+msgid "Whether to display the login form description."
+msgstr "Afficher ou non la description du formulaire de connexion."
+
+#: views/tabs/login.php:38
+msgid "Logged In Message"
+msgstr "Message de connexion"
+
+#: views/tabs/login.php:42
+msgid "e.g., Welcome back! You are already logged in."
+msgstr "ex. Bon retour ! Vous êtes déjà connecté."
+
+#: views/tabs/login.php:43
+msgid "Message displayed to users who are already logged in."
+msgstr "Message affiché aux utilisateurs déjà connectés."
+
+#: views/tabs/login.php:48
+msgid "Registration Link Text"
+msgstr "Texte du lien d'inscription"
+
+#: views/tabs/login.php:52
+msgid "e.g., Register Now"
+msgstr "ex. S'inscrire maintenant"
+
+#: views/tabs/login.php:53
+msgid "Text for the registration link (defaults to \"Register\")."
+msgstr "Texte du lien d'inscription (par défaut « S'inscrire »)."
+
+#: views/tabs/login.php:58
+msgid "Forgot Password Link Text"
+msgstr "Texte du lien mot de passe oublié"
+
+#: views/tabs/login.php:62
+msgid "e.g., Forgot Password?"
+msgstr "ex. Mot de passe oublié ?"
+
+#: views/tabs/login.php:63
+msgid "Text for the forgot password link (defaults to \"Forgot Password\")."
+msgstr "Texte du lien mot de passe oublié (par défaut « Mot de passe oublié »)."
+
+#: views/tabs/login.php:68
+msgid "Redirect URL (Optional)"
+msgstr "URL de redirection (Optionnel)"
+
+#: views/tabs/login.php:72
+msgid "e.g., https://example.com/dashboard"
+msgstr "ex. https://exemple.com/tableau-de-bord"
+
+#: views/tabs/login.php:73
+msgid "URL to redirect users after successful login. Leave blank to stay on the current page."
+msgstr "URL vers laquelle rediriger les utilisateurs après une connexion réussie. Laissez vide pour rester sur la page actuelle."
+
+#: views/tabs/progress-meter.php:7
+msgid "Display a visual progress meter showing progression towards a goal based on form entries. Perfect for fundraising campaigns, event registrations, or any goal-based tracking."
+msgstr "Affichez un indicateur de progression visuel montrant l'avancement vers un objectif basé sur les entrées de formulaire. Parfait pour les campagnes de collecte de fonds, les inscriptions à des événements ou tout suivi d'objectifs."
+
+#: views/tabs/progress-meter.php:23
+msgid "The form to track progress for."
+msgstr "Le formulaire pour lequel suivre la progression."
+
+#: views/tabs/progress-meter.php:29
+msgid "Goal"
+msgstr "Objectif"
+
+#: views/tabs/progress-meter.php:33
+msgid "The target number you want to reach (e.g., 1000 entries or $5000 raised)."
+msgstr "Le nombre cible que vous souhaitez atteindre (ex. 1000 entrées ou 5000€ collectés)."
+
+#: views/tabs/progress-meter.php:39
+msgid "Field to Track (Optional)"
+msgstr "Champ à suivre (Optionnel)"
+
+#: views/tabs/progress-meter.php:43
+msgid "Count entries (default)"
+msgstr "Compter les entrées (par défaut)"
+
+#: views/tabs/progress-meter.php:44
+msgid "Payment Amount (sum of payments)"
+msgstr "Montant des paiements (somme des paiements)"
+
+#: views/tabs/progress-meter.php:45
+msgid "Custom Field (enter field ID)"
+msgstr "Champ personnalisé (entrer l'ID du champ)"
+
+#: views/tabs/progress-meter.php:47
+msgid "What to track: entry count, payment amounts, or a specific field value."
+msgstr "Ce qu'il faut suivre : nombre d'entrées, montants des paiements ou une valeur de champ spécifique."
+
+#: views/tabs/progress-meter.php:53
+msgid "Custom Field ID"
+msgstr "ID du champ personnalisé"
+
+#: views/tabs/progress-meter.php:57
+msgid "Enter the field ID to sum values from (e.g., a number field)."
+msgstr "Entrez l'ID du champ dont vous souhaitez additionner les valeurs (ex. un champ numérique)."
+
+#: views/tabs/progress-meter.php:63
+msgid "Entry Status (Optional)"
+msgstr "Statut des entrées (Optionnel)"
+
+#: views/tabs/progress-meter.php:70
+msgid "Which entries to include in the count."
+msgstr "Quelles entrées inclure dans le comptage."
+
+#: views/tabs/progress-meter.php:76
+msgid "Starting Count (Optional)"
+msgstr "Comptage initial (Optionnel)"
+
+#: views/tabs/progress-meter.php:80
+msgid "Leave blank to start from 0"
+msgstr "Laisser vide pour commencer à 0"
+
+#: views/tabs/progress-meter.php:81
+msgid "Set a starting count (useful if you want to offset initial progress)."
+msgstr "Définir un comptage initial (utile si vous souhaitez décaler la progression initiale)."
+
+#: views/tabs/progress-meter.php:87
+msgid "Count Label"
+msgstr "Libellé du compteur"
+
+#: views/tabs/progress-meter.php:91
+msgid "e.g., %s donations or Raised $%s"
+msgstr "ex. %s dons ou %s € collectés"
+
+#: views/tabs/progress-meter.php:92
+msgid "%s submissions"
+msgstr "%s soumissions"
+
+#: views/tabs/progress-meter.php:93
+msgid "Label for the current count. Use %s as placeholder for the number."
+msgstr "Libellé pour le comptage actuel. Utilisez %s comme espace réservé pour le nombre."
+
+#: views/tabs/progress-meter.php:99
+msgid "Goal Label"
+msgstr "Libellé de l'objectif"
+
+#: views/tabs/progress-meter.php:103
+msgid "e.g., Goal: %s or Target $%s"
+msgstr "ex. Objectif : %s ou Cible %s €"
+
+#: views/tabs/progress-meter.php:104
+msgid "%s goal"
+msgstr "Objectif %s"
+
+#: views/tabs/progress-meter.php:105
+msgid "Label for the goal. Use %s as placeholder for the goal number."
+msgstr "Libellé pour l'objectif. Utilisez %s comme espace réservé pour le nombre cible."
+
+#: views/tabs/progress-meter.php:128
+msgid "Fundraising: Track donations with payment_amount field"
+msgstr "Collecte de fonds : Suivez les dons avec le champ payment_amount"
+
+#: views/tabs/progress-meter.php:129
+msgid "Event registrations: Count total registrations towards capacity"
+msgstr "Inscriptions aux événements : Comptez le total des inscriptions par rapport à la capacité"
+
+#: views/tabs/progress-meter.php:130
+msgid "Petition signatures: Track progress towards signature goal"
+msgstr "Signatures de pétition : Suivez la progression vers l'objectif de signatures"
+
+#: views/tabs/progress-meter.php:131
+msgid "Contest entries: Show how many people have entered"
+msgstr "Participations au concours : Montrez combien de personnes ont participé"
+
+#: views/tabs/split-test.php:7
+msgid "Test different versions of your forms to see which converts better. Select 2 or more forms to randomly display to visitors."
+msgstr "Testez différentes versions de vos formulaires pour voir laquelle convertit le mieux. Sélectionnez 2 formulaires ou plus pour les afficher aléatoirement aux visiteurs."
+
+#: views/tabs/split-test.php:12
+msgid "Forms to Test"
+msgstr "Formulaires à tester"
+
+#: views/tabs/split-test.php:28
+msgid "Remove"
+msgstr "Supprimer"
+
+#: views/tabs/split-test.php:34
+msgid "Add Another Form"
+msgstr "Ajouter un autre formulaire"
+
+#: views/tabs/split-test.php:37
+msgid "Add at least 2 forms to run a split test. Each form will be randomly displayed to visitors."
+msgstr "Ajoutez au moins 2 formulaires pour effectuer un test A/B. Chaque formulaire sera affiché aléatoirement aux visiteurs."
+
+#: views/tabs/split-test.php:59
+msgid "How Split Testing Works"
+msgstr "Comment fonctionne le test A/B"
+
+#: views/tabs/split-test.php:61
+msgid "Each visitor will be randomly shown one of the selected forms"
+msgstr "Chaque visiteur verra aléatoirement l'un des formulaires sélectionnés"
+
+#: views/tabs/split-test.php:62
+msgid "Gravity Forms tracks views and conversions for each form"
+msgstr "Gravity Forms suit les vues et les conversions pour chaque formulaire"
+
+#: views/tabs/split-test.php:63
+msgid "Check your form entries to see which version performs better"
+msgstr "Consultez les entrées de vos formulaires pour voir quelle version fonctionne le mieux"
+
+#: views/tabs/split-test.php:64
+msgid "The more traffic you have, the more accurate your results will be"
+msgstr "Plus vous avez de trafic, plus vos résultats seront précis"
+
+#: views/tabs/user-info.php:7
+msgid "Display information about the current user or a specific user on your page or post."
+msgstr "Affichez des informations sur l'utilisateur actuel ou un utilisateur spécifique sur votre page ou article."
+
+#: views/tabs/user-info.php:12
+msgid "User ID (Optional)"
+msgstr "ID utilisateur (Optionnel)"
+
+#: views/tabs/user-info.php:16
+msgid "The ID of the user to display information for. Leave blank to display info for the currently logged-in user."
+msgstr "L'ID de l'utilisateur dont vous souhaitez afficher les informations. Laissez vide pour afficher les informations de l'utilisateur actuellement connecté."
+
+#: views/tabs/user-info.php:22
+msgid "User Meta Key"
+msgstr "Clé méta utilisateur"
+
+#: views/tabs/user-info.php:26
+msgid "Select a user meta key"
+msgstr "Sélectionner une clé méta utilisateur"
+
+#: views/tabs/user-info.php:28
+msgid "Username (user_login)"
+msgstr "Nom d'utilisateur (user_login)"
+
+#: views/tabs/user-info.php:29
+msgid "Email (user_email)"
+msgstr "E-mail (user_email)"
+
+#: views/tabs/user-info.php:30
+msgid "Display Name (display_name)"
+msgstr "Nom affiché (display_name)"
+
+#: views/tabs/user-info.php:31
+msgid "Nice Name (user_nicename)"
+msgstr "Nom simplifié (user_nicename)"
+
+#: views/tabs/user-info.php:34
+msgid "Nickname (nickname)"
+msgstr "Surnom (nickname)"
+
+#: views/tabs/user-info.php:35
+msgid "First Name (first_name)"
+msgstr "Prénom (first_name)"
+
+#: views/tabs/user-info.php:36
+msgid "Last Name (last_name)"
+msgstr "Nom de famille (last_name)"
+
+#: views/tabs/user-info.php:37
+msgid "Biographical Info (description)"
+msgstr "Informations biographiques (description)"
+
+#: views/tabs/user-info.php:40
+msgid "Website (user_url)"
+msgstr "Site web (user_url)"
+
+#: views/tabs/user-info.php:43
+msgid "Registration Date (user_registered)"
+msgstr "Date d'inscription (user_registered)"
+
+#: views/tabs/user-info.php:44 views/tabs/user-info.php:53
+msgid "Custom Meta Key"
+msgstr "Clé méta personnalisée"
+
+#: views/tabs/user-info.php:47
+msgid "The user meta key to retrieve (e.g., nickname, first_name, last_name)."
+msgstr "La clé méta utilisateur à récupérer (ex. nickname, first_name, last_name)."
+
+#: views/tabs/user-info.php:57
+msgid "Enter the custom user meta key you want to retrieve."
+msgstr "Entrez la clé méta utilisateur personnalisée que vous souhaitez récupérer."
+
+#: views/tabs/user-info.php:63
+msgid "Output Format"
+msgstr "Format de sortie"
+
+#: views/tabs/user-info.php:67
+msgid "Raw (JSON)"
+msgstr "Brut (JSON)"
+
+#: views/tabs/user-info.php:68
+msgid "CSV (Comma-Separated)"
+msgstr "CSV (Séparé par des virgules)"
+
+#: views/tabs/user-info.php:69
+msgid "List (Formatted HTML)"
+msgstr "Liste (HTML formaté)"
+
+#: views/tabs/user-info.php:71
+msgid "How the data should be formatted when displayed."
+msgstr "Comment les données doivent être formatées lors de l'affichage."

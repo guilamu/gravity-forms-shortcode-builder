@@ -8,8 +8,10 @@
 ## **✨ Features**
 
 - **Tabbed Builder Interface:** Each shortcode category is in its own tab for clarity. Reorder tabs as you see fit.
+- **Notification Editor Modal:** Launch the builder right from the Gravity Forms notification editor (next to “Add Media”) and insert shortcodes straight into TinyMCE or the plain textarea.
 - **Core Form Display:** Build standard Gravity Forms embed shortcodes with title, description, AJAX, tab index, and field value options.
 - **Conditional Shortcodes:** Generate conditional logic shortcodes for dynamic content, supporting AND/OR groups (with [GF Advanced Conditional Shortcodes by Gravity Wiz](https://gravitywiz.com/gravity-forms-advanced-conditional-shortcode/)).
+- **Plain-Language Conditional Placeholders:** The generated conditional shortcode now describes each condition in human-readable text, using actual field labels, operators, and values.
 - **User Information:** Output user details or user meta by key, with selectable output formatting.
 - **Login Form:** Create login forms with options for custom text, registration links, redirect, and more.
 - **Split Test:** Select multiple forms for built-in A/B testing; the shortcode will rotate which form is shown to each visitor.
@@ -57,7 +59,17 @@ gravity-forms-shortcode-builder/
 ## **🚀 Usage**
 
 - Click any tab and fill out the options for your desired shortcode type.
-- Copy the auto-generated shortcode and insert it where needed in notifications, confirmations, posts, pages, etc.
+- From the notification editor, use the **Shortcode Builder** button next to “Add Media” to open the modal, generate your shortcode, and click **Insert Shortcode** to paste it automatically.
+- Copy the auto-generated shortcode and insert it where needed in confirmations, posts, pages, block patterns, etc.
+
+---
+
+## **🆕 What’s New in 1.1**
+
+- Added a modal experience inside the Gravity Forms notification editor with a dedicated toolbar button and direct shortcode insertion.
+- Restricted notification modal tabs to the most relevant shortcodes (Conditional, User Information, Entry Count, Entries Left) for a streamlined workflow.
+- Improved conditional placeholders to spell out conditions in plain language (localized) and reflect AND/OR relations.
+- Enhanced overall localization support, covering the modal button labels, state messages, and newly added placeholder text.
 
 ## **⚖️License & Feedback**
 

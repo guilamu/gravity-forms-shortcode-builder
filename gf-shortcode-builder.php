@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Gravity Forms Shortcode Builder
  * Description: Adds a tool in Form Settings to easily build various Gravity Forms shortcodes. Compatible with GF Advanced Conditional Shortcodes by GravityWiz.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Guilamu
  * Text Domain: gf-shortcode-builder
  */
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants
-define( 'GFSB_VERSION', '1.1' );
+define( 'GFSB_VERSION', '1.1.1' );
 define( 'GFSB_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GFSB_URL', plugin_dir_url( __FILE__ ) );
 
@@ -21,6 +21,7 @@ class GF_Shortcode_Builder {
 	private static $instance = null;
 	private $tabs = array();
 	private $notification_tab_ids = array( 'conditional', 'user-info', 'entry-count', 'entries-left' );
+	private $disabled_tabs = null;
 
 	public static function get_instance() {
 		if ( null === self::$instance ) {
@@ -41,6 +42,7 @@ class GF_Shortcode_Builder {
 		add_action( 'gform_form_settings_page_gf_shortcode_builder', array( $this, 'settings_page' ) );
 		add_action( 'wp_ajax_gfsb_save_tab_order', array( $this, 'save_tab_order' ) );
 		add_action( 'wp_ajax_gfsb_get_tab_content', array( $this, 'ajax_get_tab_content' ) );
+		add_action( 'wp_ajax_gfsb_save_tab_visibility', array( $this, 'save_tab_visibility' ) );
 		add_action( 'admin_footer', array( $this, 'add_notification_shortcode_modal' ) );
 		
 		// Load tab classes
@@ -155,7 +157,7 @@ class GF_Shortcode_Builder {
 			wp_send_json_error( array( 'message' => 'Form not found' ) );
 		}
 		
-		if ( ! isset( $this->tabs[ $tab_id ] ) ) {
+		if ( ! isset( $this->tabs[ $tab_id ] ) || ! $this->is_tab_enabled( $tab_id ) ) {
 			wp_send_json_error( array( 'message' => 'Tab not found' ) );
 		}
 		
@@ -164,6 +166,49 @@ class GF_Shortcode_Builder {
 		$content = ob_get_clean();
 		
 		wp_send_json_success( array( 'content' => $content ) );
+	}
+
+	private function get_disabled_tabs() {
+		if ( null === $this->disabled_tabs ) {
+			$stored = get_user_meta( get_current_user_id(), 'gfsb_disabled_tabs', true );
+			$this->disabled_tabs = is_array( $stored ) ? $stored : array();
+		}
+		return $this->disabled_tabs;
+	}
+
+	private function is_tab_enabled( $tab_id ) {
+		$disabled_tabs = $this->get_disabled_tabs();
+		return ! in_array( $tab_id, $disabled_tabs, true );
+	}
+
+	public function save_tab_visibility() {
+		check_ajax_referer( 'gfsb_toggle_tabs', 'nonce' );
+
+		if ( ! GFCommon::current_user_can_any( array( 'gravityforms_edit_forms', 'gravityforms_create_form', 'gravityforms_notification_settings' ) ) ) {
+			wp_send_json_error( array( 'message' => 'Unauthorized' ) );
+		}
+
+		$tab_id = isset( $_POST['tab_id'] ) ? sanitize_text_field( wp_unslash( $_POST['tab_id'] ) ) : '';
+		$enabled = isset( $_POST['enabled'] ) && '1' === $_POST['enabled'];
+
+		if ( empty( $tab_id ) || ! isset( $this->tabs[ $tab_id ] ) ) {
+			wp_send_json_error( array( 'message' => 'Invalid tab' ) );
+		}
+
+		$disabled_tabs = $this->get_disabled_tabs();
+
+		if ( $enabled ) {
+			$disabled_tabs = array_values( array_diff( $disabled_tabs, array( $tab_id ) ) );
+		} else {
+			if ( ! in_array( $tab_id, $disabled_tabs, true ) ) {
+				$disabled_tabs[] = $tab_id;
+			}
+		}
+
+		$this->disabled_tabs = $disabled_tabs;
+		update_user_meta( get_current_user_id(), 'gfsb_disabled_tabs', $disabled_tabs );
+
+		wp_send_json_success( array( 'disabled_tabs' => $disabled_tabs ) );
 	}
 
 	public function add_notification_shortcode_modal() {
@@ -426,6 +471,9 @@ class GF_Shortcode_Builder {
 							if ( ! in_array( $tab_id, $this->notification_tab_ids, true ) ) {
 								continue;
 							}
+							if ( ! $this->is_tab_enabled( $tab_id ) ) {
+								continue;
+							}
 							$tabs_json[] = array(
 								'id'    => $tab_id,
 								'title' => $tab_instance->get_title(),
@@ -652,6 +700,46 @@ class GF_Shortcode_Builder {
 			.gform-settings-panel .gform-settings-panel__content {
 				padding: 1rem 1rem 0 !important;
 			}
+			.gfsb-tab-toggle-panel {
+				margin-bottom: 20px;
+				padding: 16px;
+				background: #f6f7f7;
+				border: 1px solid #dcdcde;
+				border-radius: 4px;
+			}
+			.gfsb-tab-toggle-panel h5 {
+				margin: 0 0 6px;
+				font-size: 14px;
+				font-weight: 600;
+			}
+			.gfsb-tab-toggle-panel p {
+				margin: 0 0 12px;
+				color: #50575e;
+				font-size: 13px;
+			}
+			.gfsb-tab-toggle-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 10px;
+			}
+			.gfsb-tab-toggle {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				padding: 10px 12px;
+				background: #fff;
+				border: 1px solid #dcdcde;
+				border-radius: 4px;
+			}
+			.gfsb-tab-toggle input[type="checkbox"] {
+				margin: 0;
+				width: 18px;
+				height: 18px;
+			}
+			.gfsb-tab-toggle span {
+				font-size: 13px;
+				color: #1d2327;
+			}
 			.gfsb-accordions {
 				display: flex;
 				flex-direction: column;
@@ -664,6 +752,9 @@ class GF_Shortcode_Builder {
 				border-radius: 4px;
 				overflow: hidden;
 				transition: all 0.2s ease;
+			}
+			.gfsb-accordion[data-tab-enabled="0"] {
+				display: none;
 			}
 			.gfsb-accordion.dragging {
 				opacity: 0.5;
@@ -802,6 +893,27 @@ class GF_Shortcode_Builder {
 					<?php esc_html_e( 'Accordion order saved!', 'gf-shortcode-builder' ); ?>
 				</div>
 
+				<div class="gfsb-tab-toggle-panel">
+					<h5><?php esc_html_e( 'Shortcode Tabs Visibility', 'gf-shortcode-builder' ); ?></h5>
+					<p><?php esc_html_e( 'Choose which shortcode tabs are available in the builder and notification modal.', 'gf-shortcode-builder' ); ?></p>
+					<div class="gfsb-tab-toggle-grid">
+						<?php foreach ( $this->tabs as $tab_id => $tab_instance ) :
+							$toggle_label = sprintf( __( 'Enable %s tab', 'gf-shortcode-builder' ), $tab_instance->get_title() );
+							?>
+							<label class="gfsb-tab-toggle">
+								<input
+									type="checkbox"
+									class="gfsb-tab-toggle-input"
+									data-tab="<?php echo esc_attr( $tab_id ); ?>"
+									aria-label="<?php echo esc_attr( $toggle_label ); ?>"
+									<?php checked( $this->is_tab_enabled( $tab_id ) ); ?>
+								/>
+								<span><?php echo esc_html( $tab_instance->get_title() ); ?></span>
+							</label>
+						<?php endforeach; ?>
+					</div>
+				</div>
+
 				<!-- Accordions -->
 				<div class="gfsb-accordions" id="gfsb-accordions-container">
 					<?php
@@ -810,6 +922,7 @@ class GF_Shortcode_Builder {
 						<div 
 							class="gfsb-accordion" 
 							data-tab="<?php echo esc_attr( $tab_id ); ?>"
+							data-tab-enabled="<?php echo $this->is_tab_enabled( $tab_id ) ? '1' : '0'; ?>"
 							draggable="true"
 							ondragstart="gfsbDragStart(event)"
 							ondragend="gfsbDragEnd(event)"
@@ -840,6 +953,41 @@ class GF_Shortcode_Builder {
 
 		<script type="text/javascript">
 			var gfsbDraggedElement = null;
+			var gfsbToggleNonce = '<?php echo wp_create_nonce( 'gfsb_toggle_tabs' ); ?>';
+
+			function gfsbSetAccordionVisibility(tabId, enabled) {
+				var accordion = document.querySelector('.gfsb-accordion[data-tab="' + tabId + '"]');
+				if (accordion) {
+					accordion.setAttribute('data-tab-enabled', enabled ? '1' : '0');
+					accordion.style.display = enabled ? '' : 'none';
+				}
+			}
+
+			function gfsbInitTabToggles() {
+				var toggles = document.querySelectorAll('.gfsb-tab-toggle-input');
+				if (!toggles.length) {
+					return;
+				}
+				toggles.forEach(function(toggle) {
+					var tabId = toggle.getAttribute('data-tab');
+					gfsbSetAccordionVisibility(tabId, toggle.checked);
+					toggle.addEventListener('change', function(event) {
+						var target = event.target;
+						var id = target.getAttribute('data-tab');
+						var isEnabled = target.checked;
+						gfsbSetAccordionVisibility(id, isEnabled);
+
+						var data = {
+							action: 'gfsb_save_tab_visibility',
+							nonce: gfsbToggleNonce,
+							tab_id: id,
+							enabled: isEnabled ? '1' : '0'
+						};
+
+						jQuery.post(ajaxurl, data);
+					});
+				});
+			}
 
 			function gfsbToggleAccordion(event, tabId) {
 				event.preventDefault();
@@ -936,6 +1084,13 @@ class GF_Shortcode_Builder {
 						}, 3000);
 					}
 				});
+			}
+
+			// Initialize tab toggles
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', gfsbInitTabToggles);
+			} else {
+				gfsbInitTabToggles();
 			}
 		</script>
 		<?php

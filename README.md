@@ -5,7 +5,7 @@
 ![Plugin Screenshot](https://github.com/guilamu/gravity-forms-shortcode-builder/blob/main/screenshot.jpg)
 
 
-## **✨ Features**
+## **Features**
 
 - **Tabbed Builder Interface:** Each shortcode category is in its own tab for clarity. Reorder tabs as you see fit.
 - **Notification Editor Modal:** Launch the builder right from the Gravity Forms notification editor (next to “Add Media”) and insert shortcodes straight into TinyMCE or the plain textarea.
@@ -19,7 +19,7 @@
 - **Entries Left:** Show the remaining entries before a form reaches its submission limit, great for limited offers and urgency.
 - **Progress Meter:** (Optional, requires [GF Progress Meter by Gravity Wiz](https://gravitywiz.com/gravity-forms-progress-meter/)) Visual meter showing progress toward a goal, supporting advanced tracking (payments, field values, etc.).
 
-## 📂 Project Structure
+## Project Structure
 ```
 gravity-forms-shortcode-builder/
 ├── gf-shortcode-builder.php
@@ -50,7 +50,7 @@ gravity-forms-shortcode-builder/
 
 **`languages/`**: Translation files (.pot, .po, .mo) for internationalization.
 
-## **✅ Requirements**
+## **Requirements**
 
 - WordPress 5.8+ recommended
 - [Gravity Forms](https://www.gravityforms.com/) (any recent version)
@@ -59,7 +59,7 @@ gravity-forms-shortcode-builder/
 
 ---
 
-## **⚙️ Installation**
+## **Installation**
 
 1. Download and unzip this repository.
 2. Place the entire folder in your site’s `/wp-content/plugins/` directory.
@@ -68,7 +68,7 @@ gravity-forms-shortcode-builder/
 
 ---
 
-## **🚀 Usage**
+## **Usage**
 
 - Click any tab and fill out the options for your desired shortcode type.
 - From the notification editor, use the **Shortcode Builder** button next to “Add Media” to open the modal, generate your shortcode, and click **Insert Shortcode** to paste it automatically.
@@ -95,7 +95,7 @@ gravity-forms-shortcode-builder/
 ### **Version 1.0 (11/25/2025)**
 - Initial release.
 
-## **⚖️License & Feedback**
+## **License & Feedback**
 
 This project is licensed under the GNU AGPL.
 

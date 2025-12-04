@@ -1,0 +1,728 @@
+# English translation for Gravity Forms Shortcode Builder
+# Copyright (C) 2024 Guilamu
+# This file is distributed under the same license as the Gravity Forms Shortcode Builder plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Shortcode Builder 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gf-shortcode-builder.php
+msgid "Shortcode Builder"
+msgstr "Shortcode Builder"
+
+#: gf-shortcode-builder.php
+msgid "Accordion order saved!"
+msgstr "Accordion order saved!"
+
+#: gf-shortcode-builder.php
+msgid "Drag to reorder"
+msgstr "Drag to reorder"
+
+#: gf-shortcode-builder.php
+msgid "Form not found."
+msgstr "Form not found."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Core Form Display"
+msgstr "Core Form Display"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Build an embed shortcode to display your form on any page or post."
+msgstr "Build an embed shortcode to display your form on any page or post."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Form ID"
+msgstr "Form ID"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "The ID of the current form."
+msgstr "The ID of the current form."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Display Title"
+msgstr "Display Title"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Show"
+msgstr "Show"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Hide"
+msgstr "Hide"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Whether to display the form title."
+msgstr "Whether to display the form title."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Display Description"
+msgstr "Display Description"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Whether to display the form description."
+msgstr "Whether to display the form description."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Enable AJAX"
+msgstr "Enable AJAX"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Yes"
+msgstr "Yes"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "No"
+msgstr "No"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Submit the form without reloading the page."
+msgstr "Submit the form without reloading the page."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Tab Index (Optional)"
+msgstr "Tab Index (Optional)"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Leave blank for default"
+msgstr "Leave blank for default"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Starting tab index for the form (not recommended for accessibility)."
+msgstr "Starting tab index for the form (not recommended for accessibility)."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Field Values (Optional)"
+msgstr "Field Values (Optional)"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "e.g., parameter1=value1&parameter2=value2"
+msgstr "e.g., parameter1=value1&parameter2=value2"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Dynamically populate form fields using URL parameter format."
+msgstr "Dynamically populate form fields using URL parameter format."
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Generated Shortcode"
+msgstr "Generated Shortcode"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Copy to Clipboard"
+msgstr "Copy to Clipboard"
+
+#: tabs/class-gfsb-tab-core-form-display.php
+msgid "Copied to clipboard!"
+msgstr "Copied to clipboard!"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Conditional Shortcodes"
+msgstr "Conditional Shortcodes"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Select a field, an operator, and a value to generate your conditional shortcode."
+msgstr "Select a field, an operator, and a value to generate your conditional shortcode."
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Relation"
+msgstr "Relation"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Match ALL conditions (AND)"
+msgstr "Match ALL conditions (AND)"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Match ANY condition (OR)"
+msgstr "Match ANY condition (OR)"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Field"
+msgstr "Field"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Select a Field"
+msgstr "Select a Field"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Operator"
+msgstr "Operator"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Match Regex (Advanced)"
+msgstr "Match Regex (Advanced)"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "is"
+msgstr "is"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "is not"
+msgstr "is not"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "is greater than"
+msgstr "is greater than"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "is less than"
+msgstr "is less than"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "contains"
+msgstr "contains"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "starts with"
+msgstr "starts with"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "ends with"
+msgstr "ends with"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "matches the pattern"
+msgstr "matches the pattern"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "and"
+msgstr "and"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "or"
+msgstr "or"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Value"
+msgstr "Value"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Enter value..."
+msgstr "Enter value..."
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Remove Condition"
+msgstr "Remove Condition"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Add Condition"
+msgstr "Add Condition"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "User Information"
+msgstr "User Information"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Display information about the current user or a specific user on your page or post."
+msgstr "Display information about the current user or a specific user on your page or post."
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "User ID (Optional)"
+msgstr "User ID (Optional)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Leave blank for current user"
+msgstr "Leave blank for current user"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "The ID of the user to display information for. Leave blank to display info for the currently logged-in user."
+msgstr "The ID of the user to display information for. Leave blank to display info for the currently logged-in user."
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "User Meta Key"
+msgstr "User Meta Key"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Select a user meta key"
+msgstr "Select a user meta key"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Basic User Data"
+msgstr "Basic User Data"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Username (user_login)"
+msgstr "Username (user_login)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Email (user_email)"
+msgstr "Email (user_email)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Display Name (display_name)"
+msgstr "Display Name (display_name)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Nice Name (user_nicename)"
+msgstr "Nice Name (user_nicename)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Profile Information"
+msgstr "Profile Information"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Nickname (nickname)"
+msgstr "Nickname (nickname)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "First Name (first_name)"
+msgstr "First Name (first_name)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Last Name (last_name)"
+msgstr "Last Name (last_name)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Biographical Info (description)"
+msgstr "Biographical Info (description)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Website & Social"
+msgstr "Website & Social"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Website (user_url)"
+msgstr "Website (user_url)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Other"
+msgstr "Other"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Registration Date (user_registered)"
+msgstr "Registration Date (user_registered)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Custom Meta Key"
+msgstr "Custom Meta Key"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "The user meta key to retrieve (e.g., nickname, first_name, last_name)."
+msgstr "The user meta key to retrieve (e.g., nickname, first_name, last_name)."
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Enter custom meta key"
+msgstr "Enter custom meta key"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Enter the custom user meta key you want to retrieve."
+msgstr "Enter the custom user meta key you want to retrieve."
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Output Format"
+msgstr "Output Format"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "Raw (JSON)"
+msgstr "Raw (JSON)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "CSV (Comma-Separated)"
+msgstr "CSV (Comma-Separated)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "List (Formatted HTML)"
+msgstr "List (Formatted HTML)"
+
+#: tabs/class-gfsb-tab-user-info.php
+msgid "How the data should be formatted when displayed."
+msgstr "How the data should be formatted when displayed."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Login Form"
+msgstr "Login Form"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Display a custom login form on any page or post. Perfect for creating branded login experiences."
+msgstr "Display a custom login form on any page or post. Perfect for creating branded login experiences."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Whether to display the login form title."
+msgstr "Whether to display the login form title."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Whether to display the login form description."
+msgstr "Whether to display the login form description."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Logged In Message"
+msgstr "Logged In Message"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "e.g., Welcome back! You are already logged in."
+msgstr "e.g., Welcome back! You are already logged in."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Message displayed to users who are already logged in."
+msgstr "Message displayed to users who are already logged in."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Registration Link Text"
+msgstr "Registration Link Text"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "e.g., Register Now"
+msgstr "e.g., Register Now"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Text for the registration link (defaults to \"Register\")."
+msgstr "Text for the registration link (defaults to \"Register\")."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Forgot Password Link Text"
+msgstr "Forgot Password Link Text"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "e.g., Forgot Password?"
+msgstr "e.g., Forgot Password?"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Text for the forgot password link (defaults to \"Forgot Password\")."
+msgstr "Text for the forgot password link (defaults to \"Forgot Password\")."
+
+#: tabs/class-gfsb-tab-login.php
+msgid "Redirect URL (Optional)"
+msgstr "Redirect URL (Optional)"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "e.g., https://example.com/dashboard"
+msgstr "e.g., https://example.com/dashboard"
+
+#: tabs/class-gfsb-tab-login.php
+msgid "URL to redirect users after successful login. Leave blank to stay on the current page."
+msgstr "URL to redirect users after successful login. Leave blank to stay on the current page."
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Split Test"
+msgstr "Split Test"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Test different versions of your forms to see which converts better. Select 2 or more forms to randomly display to visitors."
+msgstr "Test different versions of your forms to see which converts better. Select 2 or more forms to randomly display to visitors."
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Forms to Test"
+msgstr "Forms to Test"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Select a form"
+msgstr "Select a form"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Remove"
+msgstr "Remove"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Add Another Form"
+msgstr "Add Another Form"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Add at least 2 forms to run a split test. Each form will be randomly displayed to visitors."
+msgstr "Add at least 2 forms to run a split test. Each form will be randomly displayed to visitors."
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "How Split Testing Works"
+msgstr "How Split Testing Works"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Each visitor will be randomly shown one of the selected forms"
+msgstr "Each visitor will be randomly shown one of the selected forms"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Gravity Forms tracks views and conversions for each form"
+msgstr "Gravity Forms tracks views and conversions for each form"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "Check your form entries to see which version performs better"
+msgstr "Check your form entries to see which version performs better"
+
+#: tabs/class-gfsb-tab-split-test.php
+msgid "The more traffic you have, the more accurate your results will be"
+msgstr "The more traffic you have, the more accurate your results will be"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Entry Count"
+msgstr "Entry Count"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Display the number of entries submitted for a form. Great for showing social proof or interest levels."
+msgstr "Display the number of entries submitted for a form. Great for showing social proof or interest levels."
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Select Form"
+msgstr "Select Form"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "The form for which you want to display the entry count."
+msgstr "The form for which you want to display the entry count."
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Entry Status"
+msgstr "Entry Status"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Total (All entries)"
+msgstr "Total (All entries)"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Unread"
+msgstr "Unread"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Starred"
+msgstr "Starred"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Spam"
+msgstr "Spam"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Trash"
+msgstr "Trash"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Type of entries to count (defaults to \"total\")."
+msgstr "Type of entries to count (defaults to \"total\")."
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Number Format"
+msgstr "Number Format"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Comma (e.g., 1,234)"
+msgstr "Comma (e.g., 1,234)"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Decimal (e.g., 1.234)"
+msgstr "Decimal (e.g., 1.234)"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "How to format the displayed number."
+msgstr "How to format the displayed number."
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Usage Examples"
+msgstr "Usage Examples"
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Show social proof: \"Join 1,234 other subscribers!\""
+msgstr "Show social proof: \"Join 1,234 other subscribers!\""
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Display event registrations: \"523 people registered\""
+msgstr "Display event registrations: \"523 people registered\""
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Track contest entries: \"15,678 entries submitted\""
+msgstr "Track contest entries: \"15,678 entries submitted\""
+
+#: tabs/class-gfsb-tab-entry-count.php
+msgid "Monitor form engagement across your site"
+msgstr "Monitor form engagement across your site"
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Entries Left"
+msgstr "Entries Left"
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Display the number of entries remaining before a form reaches its entry limit. Perfect for limited offers, event registrations, or contests."
+msgstr "Display the number of entries remaining before a form reaches its entry limit. Perfect for limited offers, event registrations, or contests."
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Entry Limits Not Enabled"
+msgstr "Entry Limits Not Enabled"
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "The current form does not have entry limits enabled. To use the Entries Left shortcode, you need to enable \"Limit number of entries\" in Form Settings > Restrictions."
+msgstr "The current form does not have entry limits enabled. To use the Entries Left shortcode, you need to enable \"Limit number of entries\" in Form Settings > Restrictions."
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "(No limit set)"
+msgstr "(No limit set)"
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "The form for which you want to display entries remaining. Forms without entry limits will show unlimited entries."
+msgstr "The form for which you want to display entries remaining. Forms without entry limits will show unlimited entries."
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Create urgency: \"Only 23 spots left! Register now!\""
+msgstr "Create urgency: \"Only 23 spots left! Register now!\""
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Limited offers: \"15 early bird tickets remaining\""
+msgstr "Limited offers: \"15 early bird tickets remaining\""
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Contest entries: \"47 entries left before we close submissions\""
+msgstr "Contest entries: \"47 entries left before we close submissions\""
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Workshop signups: \"3 seats available for this workshop\""
+msgstr "Workshop signups: \"3 seats available for this workshop\""
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "How to Enable Entry Limits"
+msgstr "How to Enable Entry Limits"
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Go to your form settings"
+msgstr "Go to your form settings"
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Click on \"Restrictions\" in the left sidebar"
+msgstr "Click on \"Restrictions\" in the left sidebar"
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Enable \"Limit number of entries\""
+msgstr "Enable \"Limit number of entries\""
+
+#: tabs/class-gfsb-tab-entries-left.php
+msgid "Set your desired entry limit"
+msgstr "Set your desired entry limit"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Progress Meter"
+msgstr "Progress Meter"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Display a visual progress meter showing progression towards a goal based on form entries. Perfect for fundraising campaigns, event registrations, or any goal-based tracking."
+msgstr "Display a visual progress meter showing progression towards a goal based on form entries. Perfect for fundraising campaigns, event registrations, or any goal-based tracking."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "The form to track progress for."
+msgstr "The form to track progress for."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Goal"
+msgstr "Goal"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "e.g., 1000"
+msgstr "e.g., 1000"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "The target number you want to reach (e.g., 1000 entries or $5000 raised)."
+msgstr "The target number you want to reach (e.g., 1000 entries or $5000 raised)."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Field to Track (Optional)"
+msgstr "Field to Track (Optional)"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Count entries (default)"
+msgstr "Count entries (default)"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Payment Amount (sum of payments)"
+msgstr "Payment Amount (sum of payments)"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Custom Field (enter field ID)"
+msgstr "Custom Field (enter field ID)"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "What to track: entry count, payment amounts, or a specific field value."
+msgstr "What to track: entry count, payment amounts, or a specific field value."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Custom Field ID"
+msgstr "Custom Field ID"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "e.g., 5"
+msgstr "e.g., 5"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Enter the field ID to sum values from (e.g., a number field)."
+msgstr "Enter the field ID to sum values from (e.g., a number field)."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Which entries to include in the count."
+msgstr "Which entries to include in the count."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Starting Count (Optional)"
+msgstr "Starting Count (Optional)"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Leave blank to start from 0"
+msgstr "Leave blank to start from 0"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Set a starting count (useful if you want to offset initial progress)."
+msgstr "Set a starting count (useful if you want to offset initial progress)."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Count Label"
+msgstr "Count Label"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "e.g., %s donations or Raised $%s"
+msgstr "e.g., %s donations or Raised $%s"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "%s submissions"
+msgstr "%s submissions"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Label for the current count. Use %s as placeholder for the number."
+msgstr "Label for the current count. Use %s as placeholder for the number."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Goal Label"
+msgstr "Goal Label"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "e.g., Goal: %s or Target $%s"
+msgstr "e.g., Goal: %s or Target $%s"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "%s goal"
+msgstr "%s goal"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Label for the goal. Use %s as placeholder for the goal number."
+msgstr "Label for the goal. Use %s as placeholder for the goal number."
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Fundraising: Track donations with payment_amount field"
+msgstr "Fundraising: Track donations with payment_amount field"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Event registrations: Count total registrations towards capacity"
+msgstr "Event registrations: Count total registrations towards capacity"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Petition signatures: Track progress towards signature goal"
+msgstr "Petition signatures: Track progress towards signature goal"
+
+#: tabs/class-gfsb-tab-progress-meter.php
+msgid "Contest entries: Show how many people have entered"
+msgstr "Contest entries: Show how many people have entered"
+
+#: gf-shortcode-builder.php
+msgid "Insert shortcode"
+msgstr "Insert shortcode"
+
+#: gf-shortcode-builder.php
+msgid "Loading shortcode builder"
+msgstr "Loading shortcode builder"
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Insert your content here based on the condition."
+msgstr "Insert your content here based on the condition."
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "Insert the content you want to display if %s."
+msgstr "Insert the content you want to display if %s."
+
+#: tabs/class-gfsb-tab-conditional.php
+msgid "the field"
+msgstr "the field"

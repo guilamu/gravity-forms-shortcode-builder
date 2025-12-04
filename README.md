@@ -2,7 +2,7 @@
 
 **Easily build and manage complex Gravity Forms shortcodes via a user-friendly interface in the Form Settings panel. Each shortcode type is available as a tab—ideal for sites using conditional display, entry stats, split tests, login forms, and more. Compatible with Gravity Wiz Advanced Conditional Shortcodes and Gravity Wiz Progress Meter, where available.**
 
-![Plugin Screenshot](https://github.com/guilamu/gravity-forms-shortcode-builder/blob/main/screenshot.jpg)
+![Plugin Screenshot](https://github.com/guilamu/gravity-forms-shortcode-builder/blob/main/screenshot.png)
 
 
 ## **✨ Features**
@@ -64,7 +64,12 @@ gravity-forms-shortcode-builder/
 
 ---
 
-## **🆕 What’s New in 1.1 (12/04/2025)**
+## **🆕 What's New in 1.1.1 (12/04/2025)**
+
+- Added per-tab visibility toggles at the top of the Shortcode Builder page. Disable any tab to hide it from the builder and the notification modal dropdown.
+- Tab visibility preferences are saved per user and persist across sessions.
+
+## **🆕 What's New in 1.1 (12/04/2025)**
 
 - Added a modal experience inside the Gravity Forms notification editor with a dedicated toolbar button and direct shortcode insertion.
 - Restricted notification modal tabs to the most relevant shortcodes (Conditional, User Information, Entry Count, Entries Left) for a streamlined workflow.

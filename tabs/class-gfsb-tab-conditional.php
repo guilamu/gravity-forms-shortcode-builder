@@ -44,7 +44,7 @@ class GFSB_Tab_Conditional {
 							}
 							$label = GFCommon::get_label( $field );
 							$merge_tag = '{' . $label . ':' . $field->id . '}';
-							echo '<option value="' . esc_attr( $merge_tag ) . '">' . esc_html( $label ) . ' (ID: ' . esc_html( $field->id ) . ')</option>';
+							echo '<option value="' . esc_attr( $merge_tag ) . '" data-label="' . esc_attr( $label ) . '">' . esc_html( $label ) . ' (ID: ' . esc_html( $field->id ) . ')</option>';
 						}
 						?>
 					</select>
@@ -99,6 +99,21 @@ class GFSB_Tab_Conditional {
 		</div>
 
 		<script type="text/javascript">
+			var gfCSBOperatorLabels = <?php echo wp_json_encode( array(
+				'is'           => __( 'is', 'gf-shortcode-builder' ),
+				'isnot'        => __( 'is not', 'gf-shortcode-builder' ),
+				'greater_than' => __( 'is greater than', 'gf-shortcode-builder' ),
+				'less_than'    => __( 'is less than', 'gf-shortcode-builder' ),
+				'contains'     => __( 'contains', 'gf-shortcode-builder' ),
+				'starts_with'  => __( 'starts with', 'gf-shortcode-builder' ),
+				'ends_with'    => __( 'ends with', 'gf-shortcode-builder' ),
+				'pattern'      => __( 'matches the pattern', 'gf-shortcode-builder' ),
+			) ); ?>;
+			var gfCSBFieldPrefix = <?php echo wp_json_encode( __( 'the field', 'gf-shortcode-builder' ) ); ?>;
+			var gfCSBConnectorAnd = <?php echo wp_json_encode( __( 'and', 'gf-shortcode-builder' ) ); ?>;
+			var gfCSBConnectorOr = <?php echo wp_json_encode( __( 'or', 'gf-shortcode-builder' ) ); ?>;
+			var gfCSBPlaceholderIntro = <?php echo wp_json_encode( __( 'Insert the content you want to display if %s.', 'gf-shortcode-builder' ) ); ?>;
+			var gfCSBPlaceholderDefault = <?php echo wp_json_encode( __( 'Insert your content here based on the condition.', 'gf-shortcode-builder' ) ); ?>;
 			function gfCSBUpdate() {
 				var rows = document.querySelectorAll('.gf-csb-row');
 				var relation = document.getElementById('gf_csb_relation') ? document.getElementById('gf_csb_relation').value : 'and';
@@ -109,11 +124,16 @@ class GFSB_Tab_Conditional {
 				}
 
 				var validConditions = 0;
+				var conditionDescriptions = [];
 
 				rows.forEach(function(row, index) {
-					var field = row.querySelector('.gf-csb-field-select').value;
+					var fieldSelect = row.querySelector('.gf-csb-field-select');
+					var field = fieldSelect.value;
 					var operator = row.querySelector('.gf-csb-operator-select').value;
 					var value = row.querySelector('.gf-csb-value-input').value;
+					var trimmedValue = value.trim();
+					var selectedOption = fieldSelect.options[fieldSelect.selectedIndex];
+					var fieldLabel = selectedOption ? selectedOption.getAttribute('data-label') : '';
 
 					if (field) {
 						validConditions++;
@@ -122,11 +142,27 @@ class GFSB_Tab_Conditional {
 						shortcode += ' merge_tag' + suffix + '="' + field + '"';
 						shortcode += ' condition' + suffix + '="' + operator + '"';
 						shortcode += ' value' + suffix + '="' + value + '"';
+
+						var operatorText = gfCSBOperatorLabels[operator] || operator;
+						var description = fieldLabel ? gfCSBFieldPrefix + ' ' + fieldLabel + ' ' + operatorText : operatorText;
+
+						if (trimmedValue.length > 0) {
+							description += ' ' + trimmedValue;
+						}
+
+						conditionDescriptions.push(description);
 					}
 				});
 
+				var placeholderText = gfCSBPlaceholderDefault;
+				if (conditionDescriptions.length > 0) {
+					var relationWord = relation === 'or' ? gfCSBConnectorOr : gfCSBConnectorAnd;
+					var humanConditions = conditionDescriptions.join(' ' + relationWord + ' ');
+					placeholderText = gfCSBPlaceholderIntro.replace('%s', humanConditions);
+				}
+
 				shortcode += ']\n';
-				shortcode += '   Insert your content here based on the condition.\n';
+				shortcode += '   ' + placeholderText + '\n';
 				shortcode += '[/gravityforms]';
 
 				if (validConditions === 0) {

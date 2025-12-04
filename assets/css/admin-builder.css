@@ -1,0 +1,236 @@
+/**
+ * Gravity Forms Shortcode Builder - Admin Builder Styles
+ *
+ * @package GF_Shortcode_Builder
+ * @since 1.2.0
+ */
+
+/* Panel Content */
+.gform-settings-panel .gform-settings-panel__content {
+	padding: 1rem 1rem 0 !important;
+}
+
+/* Tab Toggle Panel */
+.gfsb-tab-toggle-panel {
+	margin-bottom: 20px;
+	padding: 16px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.gfsb-tab-toggle-panel h5 {
+	margin: 0 0 6px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.gfsb-tab-toggle-panel p {
+	margin: 0 0 12px;
+	color: #50575e;
+	font-size: 13px;
+}
+
+.gfsb-tab-toggle-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 10px;
+}
+
+.gfsb-tab-toggle {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 12px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.gfsb-tab-toggle input[type="checkbox"] {
+	margin: 0;
+	width: 18px;
+	height: 18px;
+}
+
+.gfsb-tab-toggle span {
+	font-size: 13px;
+	color: #1d2327;
+}
+
+/* Accordions Container */
+.gfsb-accordions {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 24px;
+}
+
+/* Accordion Base Styles */
+.gfsb-accordion {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	overflow: hidden;
+	transition: all 0.2s ease;
+}
+
+.gfsb-accordion[data-tab-enabled="0"] {
+	display: none;
+}
+
+.gfsb-accordion.dragging {
+	opacity: 0.5;
+}
+
+.gfsb-accordion.drag-over {
+	border-top: 3px solid #3858e9;
+}
+
+/* Accordion Header */
+.gfsb-accordion-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 16px;
+	cursor: pointer;
+	background: #fff;
+	border: none;
+	width: 100%;
+	text-align: left;
+	font-size: 14px;
+	font-weight: 600;
+	color: #1d2327;
+	transition: background 0.2s ease;
+}
+
+.gfsb-accordion-header:hover {
+	background: #f6f7f7;
+}
+
+/* Drag Handle */
+.gfsb-accordion-drag-handle {
+	cursor: grab;
+	color: #a7aaad;
+	font-size: 18px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.gfsb-accordion-drag-handle:hover {
+	color: #1d2327;
+}
+
+.gfsb-accordion.dragging .gfsb-accordion-drag-handle {
+	cursor: grabbing;
+}
+
+/* Accordion Title and Icon */
+.gfsb-accordion-title {
+	flex: 1;
+}
+
+.gfsb-accordion-icon {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #50575e;
+	transition: transform 0.2s ease;
+	flex-shrink: 0;
+}
+
+.gfsb-accordion.open .gfsb-accordion-icon {
+	transform: rotate(180deg);
+}
+
+/* Accordion Content */
+.gfsb-accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+	border-top: 1px solid #dcdcde;
+}
+
+.gfsb-accordion.open .gfsb-accordion-content {
+	max-height: 5000px;
+}
+
+.gfsb-accordion-content-inner {
+	padding: 20px;
+}
+
+/* Form Fields */
+.gform-settings-field {
+	margin-bottom: 24px;
+}
+
+.gform-settings-label {
+	font-weight: 600;
+	display: block;
+	margin-bottom: 8px;
+}
+
+.fullwidth-input {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box;
+}
+
+/* Helper Elements */
+.gfsb-help-text {
+	color: #646970;
+	font-size: 13px;
+	margin-top: 8px;
+}
+
+.gfsb-form-selector {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px;
+	background: #f6f7f7;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.gfsb-form-selector select {
+	flex: 1;
+}
+
+.gfsb-form-selector .button {
+	flex-shrink: 0;
+}
+
+/* Warning Box */
+.gfsb-warning-box {
+	background: #fcf9e8;
+	border-left: 4px solid #dba617;
+	padding: 15px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.gfsb-warning-box h4 {
+	margin-top: 0;
+	color: #1d2327;
+}
+
+/* Order Notice */
+.gfsb-accordion-order-notice {
+	display: none;
+	padding: 8px 12px;
+	background: #d7f1ff;
+	border-left: 4px solid #3858e9;
+	margin-bottom: 16px;
+	font-size: 13px;
+	color: #1d2327;
+	border-radius: 4px;
+}
+
+.gfsb-accordion-order-notice.show {
+	display: block;
+}

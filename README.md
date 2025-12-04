@@ -80,17 +80,20 @@ gravity-forms-shortcode-builder/
 
 - Refactored all inline CSS and JavaScript to external asset files for improved maintainability, browser caching, and code organization.
 
-## **🆕 Version 1.1.1 (12/04/2025)**
+## **Version 1.1.1 (12/04/2025)**
 
 - Added per-tab visibility toggles at the top of the Shortcode Builder page. Disable any tab to hide it from the builder and the notification modal dropdown.
 - Tab visibility preferences are saved per user and persist across sessions.
 
-## **🆕 Version 1.1 (12/04/2025)**
+## **Version 1.1 (12/04/2025)**
 
 - Added a modal experience inside the Gravity Forms notification editor with a dedicated toolbar button and direct shortcode insertion.
 - Restricted notification modal tabs to the most relevant shortcodes (Conditional, User Information, Entry Count, Entries Left) for a streamlined workflow.
 - Improved conditional placeholders to spell out conditions in plain language (localized) and reflect AND/OR relations.
 - Enhanced overall localization support, covering the modal button labels, state messages, and newly added placeholder text.
+
+## **Version 1.0 (11/25/2025)**
+- Initial release.
 
 ## **⚖️License & Feedback**
 

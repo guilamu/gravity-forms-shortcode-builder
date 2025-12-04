@@ -1,0 +1,71 @@
+/**
+ * Gravity Forms Shortcode Builder - Notification Modal Styles
+ *
+ * @package GF_Shortcode_Builder
+ * @since 1.2.0
+ */
+
+/* Dropdown Menu */
+.gfsb-notification-dropdown {
+	display: none;
+	position: absolute;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+	z-index: 10000;
+	min-width: 250px;
+	margin-top: 4px;
+}
+
+.gfsb-notification-dropdown.show {
+	display: block;
+}
+
+.gfsb-notification-dropdown-item {
+	padding: 10px 16px;
+	cursor: pointer;
+	border-bottom: 1px solid #f0f0f1;
+	transition: background 0.2s ease;
+}
+
+.gfsb-notification-dropdown-item:last-child {
+	border-bottom: none;
+}
+
+.gfsb-notification-dropdown-item:hover {
+	background: #f6f7f7;
+}
+
+/* Modal Content Layout */
+#gfsb-modal-tab-content.gfsb-modal-fullwidth .gform-settings-field {
+	max-width: none;
+	width: 100%;
+}
+
+#gfsb-modal-tab-content.gfsb-modal-fullwidth .gform-settings-input__container,
+#gfsb-modal-tab-content.gfsb-modal-fullwidth .gform-input,
+#gfsb-modal-tab-content.gfsb-modal-fullwidth .fullwidth-input,
+#gfsb-modal-tab-content.gfsb-modal-fullwidth select,
+#gfsb-modal-tab-content.gfsb-modal-fullwidth input,
+#gfsb-modal-tab-content.gfsb-modal-fullwidth textarea {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box;
+}
+
+/* Preview Field in Modal */
+#gfsb-modal-tab-content .gfsb-modal-preview-field .gform-settings-field__header,
+#gfsb-modal-tab-content .gfsb-modal-preview-field textarea,
+#gfsb-modal-tab-content .gfsb-modal-preview-field #gf_csb_copy_msg {
+	display: none !important;
+}
+
+#gfsb-modal-tab-content .gfsb-modal-preview-field button {
+	width: 100%;
+	margin-top: 0;
+}
+
+#gfsb-modal-tab-content .gfsb-modal-preview-field {
+	padding-top: 0;
+}

@@ -82,6 +82,7 @@ gravity-forms-shortcode-builder/
 ## **Changelog**
 ### **Version 1.2.0 (12/04/2025)**
 
+- Added a logo
 - Refactored all inline CSS and JavaScript to external asset files for improved maintainability, browser caching, and code organization.
 
 ### **Version 1.1.1 (12/04/2025)**

@@ -125,10 +125,8 @@ class Plugin {
 				'loadingText'       => esc_html__( 'Loading shortcode builder', 'gf-shortcode-builder' ),
 				'copyButtonTexts'   => [
 					__( 'Copy to Clipboard', 'gf-shortcode-builder' ),
-					'Copy to Clipboard',
-					'Copier dans le presse-papiers',
 				],
-				'errorTabLoad'      => __( 'Unable to load shortcode builder tab.', 'gf-shortcode-builder' ),
+				'errorTabLoad'      => __( 'Unable to load shortcode builder accordion.', 'gf-shortcode-builder' ),
 				'errorRequest'      => __( 'The shortcode builder could not be loaded. Check the console for details.', 'gf-shortcode-builder' ),
 				'errorNoShortcode'  => __( 'Please generate a shortcode first.', 'gf-shortcode-builder' ),
 				'errorInsert'       => __( 'Unable to insert the shortcode. Please paste it manually.', 'gf-shortcode-builder' ),
@@ -206,7 +204,7 @@ class Plugin {
 		check_ajax_referer( 'gfsb_tab_order', 'nonce' );
 		
 		if ( ! GFCommon::current_user_can_any( 'gravityforms_edit_forms' ) ) {
-			wp_send_json_error( [ 'message' => 'Unauthorized' ] );
+			wp_send_json_error( [ 'message' => __( 'Unauthorized', 'gf-shortcode-builder' ) ] );
 		}
 		
 		$tab_order = isset( $_POST['tab_order'] ) ? array_map( 'sanitize_text_field', $_POST['tab_order'] ) : [];
@@ -219,31 +217,31 @@ class Plugin {
 
 		update_user_meta( get_current_user_id(), 'gfsb_tab_order', $clean_order );
 		
-		wp_send_json_success( [ 'message' => 'Tab order saved' ] );
+		wp_send_json_success( [ 'message' => __( 'Tab order saved', 'gf-shortcode-builder' ) ] );
 	}
 
 	public function ajax_get_tab_content() {
 		check_ajax_referer( 'gfsb_get_tab', 'nonce' );
 		
 		if ( ! GFCommon::current_user_can_any( 'gravityforms_edit_forms' ) ) {
-			wp_send_json_error( [ 'message' => 'Unauthorized' ] );
+			wp_send_json_error( [ 'message' => __( 'Unauthorized', 'gf-shortcode-builder' ) ] );
 		}
 		
 		$tab_id = isset( $_POST['tab_id'] ) ? sanitize_text_field( $_POST['tab_id'] ) : '';
 		$form_id = isset( $_POST['form_id'] ) ? intval( $_POST['form_id'] ) : 0;
 		
 		if ( empty( $tab_id ) || ! $form_id ) {
-			wp_send_json_error( [ 'message' => 'Invalid parameters' ] );
+			wp_send_json_error( [ 'message' => __( 'Invalid parameters', 'gf-shortcode-builder' ) ] );
 		}
 		
 		$form = GFAPI::get_form( $form_id );
 		
 		if ( ! $form ) {
-			wp_send_json_error( [ 'message' => 'Form not found' ] );
+			wp_send_json_error( [ 'message' => __( 'Form not found', 'gf-shortcode-builder' ) ] );
 		}
 		
 		if ( ! isset( $this->tabs[ $tab_id ] ) || ! $this->is_tab_enabled( $tab_id ) ) {
-			wp_send_json_error( [ 'message' => 'Tab not found' ] );
+			wp_send_json_error( [ 'message' => __( 'Tab not found', 'gf-shortcode-builder' ) ] );
 		}
 		
 		ob_start();
@@ -270,14 +268,14 @@ class Plugin {
 		check_ajax_referer( 'gfsb_toggle_tabs', 'nonce' );
 
 		if ( ! GFCommon::current_user_can_any( 'gravityforms_edit_forms' ) ) {
-			wp_send_json_error( [ 'message' => 'Unauthorized' ] );
+			wp_send_json_error( [ 'message' => __( 'Unauthorized', 'gf-shortcode-builder' ) ] );
 		}
 
 		$tab_id = isset( $_POST['tab_id'] ) ? sanitize_text_field( wp_unslash( $_POST['tab_id'] ) ) : '';
 		$enabled = isset( $_POST['enabled'] ) && '1' === $_POST['enabled'];
 
 		if ( empty( $tab_id ) || ! isset( $this->tabs[ $tab_id ] ) ) {
-			wp_send_json_error( [ 'message' => 'Invalid tab' ] );
+			wp_send_json_error( [ 'message' => __( 'Invalid tab', 'gf-shortcode-builder' ) ] );
 		}
 
 		$disabled_tabs = $this->get_disabled_tabs();
@@ -370,11 +368,11 @@ class Plugin {
 				</div>
 
 				<div class="gfsb-tab-toggle-panel">
-					<h5><?php esc_html_e( 'Shortcode Tabs Visibility', 'gf-shortcode-builder' ); ?></h5>
-					<p><?php esc_html_e( 'Choose which shortcode tabs are available in the builder and notification modal.', 'gf-shortcode-builder' ); ?></p>
+					<h5><?php esc_html_e( 'Accordions Visibility', 'gf-shortcode-builder' ); ?></h5>
+					<p><?php esc_html_e( 'Choose which accordions are available in the builder and notification modal.', 'gf-shortcode-builder' ); ?></p>
 					<div class="gfsb-tab-toggle-grid">
 						<?php foreach ( $this->tabs as $tab_id => $tab_instance ) :
-							$toggle_label = sprintf( __( 'Enable %s tab', 'gf-shortcode-builder' ), $tab_instance->get_title() );
+							$toggle_label = sprintf( __( 'Enable %s accordion', 'gf-shortcode-builder' ), $tab_instance->get_title() );
 							?>
 							<label class="gfsb-tab-toggle">
 								<input

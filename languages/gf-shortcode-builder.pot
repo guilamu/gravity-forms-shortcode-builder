@@ -1,10 +1,10 @@
-# Copyright (C) 2024 Guilamu
+# Copyright (C) 2026 Guilamu
 # This file is distributed under the same license as the Gravity Forms Shortcode Builder plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Forms Shortcode Builder 2.0\n"
+"Project-Id-Version: Gravity Forms Shortcode Builder 1.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-04 21:53+0000\n"
+"POT-Creation-Date: 2026-03-05 00:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -71,7 +71,11 @@ msgstr ""
 msgid "Tab not found"
 msgstr ""
 
-#: includes/Plugin.php:278
+#: includes/Plugin.php:255
+msgid "Error rendering tab content."
+msgstr ""
+
+#: includes/Plugin.php:279
 msgid "Invalid tab"
 msgstr ""
 
@@ -164,11 +168,15 @@ msgstr ""
 msgid "Field"
 msgstr ""
 
-#: views/tabs/conditional.php:35
+#: views/tabs/conditional.php:30
 msgid "Select a Field"
 msgstr ""
 
-#: views/tabs/conditional.php:51
+#: views/tabs/conditional.php:46
+msgid "All"
+msgstr ""
+
+#: views/tabs/conditional.php:80
 msgid "Operator"
 msgstr ""
 
@@ -747,4 +755,8 @@ msgstr ""
 
 #: views/tabs/user-info.php:71
 msgid "How the data should be formatted when displayed."
+msgstr ""
+
+#: includes/class-github-updater.php:336
+msgid "Unable to rename the update folder. Please retry or update manually."
 msgstr ""

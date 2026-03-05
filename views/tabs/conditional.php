@@ -33,9 +33,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 					if ( in_array( $field->type, [ 'page', 'section', 'html' ], true ) ) {
 						continue;
 					}
-					$label = GFCommon::get_label( $field );
-					$merge_tag = '{' . $label . ':' . $field->id . '}';
-					echo '<option value="' . esc_attr( $merge_tag ) . '" data-label="' . esc_attr( $label ) . '">' . esc_html( $label ) . ' (ID: ' . esc_html( $field->id ) . ')</option>';
+
+					$field_label = GFCommon::get_label( $field );
+
+					// Fields with subfields (Address, Name, Date-dropdown, Time, Checkbox, etc.).
+					if ( ! empty( $field->inputs ) && is_array( $field->inputs ) ) {
+						// Parent option (targets the full combined value).
+						$parent_tag = '{' . $field_label . ':' . $field->id . '}';
+						echo '<optgroup label="' . esc_attr( $field_label ) . ' (ID: ' . esc_attr( $field->id ) . ')">';
+						echo '<option value="' . esc_attr( $parent_tag ) . '" data-label="' . esc_attr( $field_label ) . '">'
+							. esc_html( $field_label ) . ' — '
+							. esc_html__( 'All', 'gf-shortcode-builder' )
+							. '</option>';
+
+						// Individual subfield options.
+						foreach ( $field->inputs as $input ) {
+							if ( ! empty( $input['isHidden'] ) ) {
+								continue;
+							}
+
+							$input_label = ! empty( $input['customLabel'] )
+								? $input['customLabel']
+								: ( $input['label'] ?? '' );
+
+							$sub_label   = $field_label . ' (' . $input_label . ')';
+							$sub_tag     = '{' . $field_label . ':' . $input['id'] . '}';
+
+							echo '<option value="' . esc_attr( $sub_tag ) . '" data-label="' . esc_attr( $sub_label ) . '">'
+								. esc_html( $input_label )
+								. ' (ID: ' . esc_html( $input['id'] ) . ')'
+								. '</option>';
+						}
+
+						echo '</optgroup>';
+					} else {
+						// Simple field (single value).
+						$merge_tag = '{' . $field_label . ':' . $field->id . '}';
+						echo '<option value="' . esc_attr( $merge_tag ) . '" data-label="' . esc_attr( $field_label ) . '">' . esc_html( $field_label ) . ' (ID: ' . esc_html( $field->id ) . ')</option>';
+					}
 				}
 				?>
 			</select>

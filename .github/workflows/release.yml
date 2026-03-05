@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Create plugin zip
+        run: |
+          mkdir -p build/gravity-forms-shortcode-builder
+
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='build' \
+            --exclude='.gitignore' \
+            --exclude='composer.*' \
+            --exclude='package*.json' \
+            --exclude='node_modules' \
+            --exclude='.DS_Store' \
+            --exclude='screenshot*.*' \
+            --exclude='logo.png' \
+            --exclude='*.Reference.md' \
+            ./ build/gravity-forms-shortcode-builder/
+
+          cp README.md build/gravity-forms-shortcode-builder/ 2>/dev/null || true
+
+          cd build
+          zip -r ../gravity-forms-shortcode-builder.zip gravity-forms-shortcode-builder
+          cd ..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: gravity-forms-shortcode-builder.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

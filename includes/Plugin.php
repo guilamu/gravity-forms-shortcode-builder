@@ -54,10 +54,10 @@ class Plugin {
 			return;
 		}
 
-		$page    = rgget( 'page' );
-		$view    = rgget( 'view' );
-		$subview = rgget( 'subview' );
-		$form_id = rgget( 'id' );
+		$page    = \rgget( 'page' );
+		$view    = \rgget( 'view' );
+		$subview = \rgget( 'subview' );
+		$form_id = \rgget( 'id' );
 
 		// Builder page assets.
 		if ( 'gf_edit_forms' === $page && 'settings' === $view && 'gf_shortcode_builder' === $subview && $form_id ) {
@@ -207,15 +207,18 @@ class Plugin {
 			wp_send_json_error( [ 'message' => __( 'Unauthorized', 'gf-shortcode-builder' ) ] );
 		}
 		
-		$tab_order = isset( $_POST['tab_order'] ) ? array_map( 'sanitize_text_field', $_POST['tab_order'] ) : [];
-		
-		// Validate that all items in tab_order are valid tab IDs
+		$raw_order = ( isset( $_POST['tab_order'] ) && is_array( $_POST['tab_order'] ) )
+			? wp_unslash( $_POST['tab_order'] )
+			: [];
+		$tab_order = array_map( 'sanitize_text_field', $raw_order );
+
+		// Validate that all items in tab_order are valid tab IDs.
 		$valid_tab_ids = array_keys( $this->tabs );
-		$clean_order = array_filter( $tab_order, function( $tab_id ) use ( $valid_tab_ids ) {
+		$clean_order   = array_filter( $tab_order, function( $tab_id ) use ( $valid_tab_ids ) {
 			return in_array( $tab_id, $valid_tab_ids, true );
 		} );
 
-		update_user_meta( get_current_user_id(), 'gfsb_tab_order', $clean_order );
+		update_user_meta( get_current_user_id(), 'gfsb_tab_order', array_values( $clean_order ) );
 		
 		wp_send_json_success( [ 'message' => __( 'Tab order saved', 'gf-shortcode-builder' ) ] );
 	}
@@ -227,8 +230,8 @@ class Plugin {
 			wp_send_json_error( [ 'message' => __( 'Unauthorized', 'gf-shortcode-builder' ) ] );
 		}
 		
-		$tab_id = isset( $_POST['tab_id'] ) ? sanitize_text_field( $_POST['tab_id'] ) : '';
-		$form_id = isset( $_POST['form_id'] ) ? intval( $_POST['form_id'] ) : 0;
+		$tab_id  = isset( $_POST['tab_id'] ) ? sanitize_text_field( wp_unslash( $_POST['tab_id'] ) ) : '';
+		$form_id = isset( $_POST['form_id'] ) ? absint( wp_unslash( $_POST['form_id'] ) ) : 0;
 		
 		if ( empty( $tab_id ) || ! $form_id ) {
 			wp_send_json_error( [ 'message' => __( 'Invalid parameters', 'gf-shortcode-builder' ) ] );
@@ -245,9 +248,15 @@ class Plugin {
 		}
 		
 		ob_start();
-		$this->tabs[ $tab_id ]->render( $form );
+		try {
+			$this->tabs[ $tab_id ]->render( $form );
+		} catch ( \Throwable $e ) {
+			ob_end_clean();
+			wp_send_json_error( [ 'message' => __( 'Error rendering tab content.', 'gf-shortcode-builder' ) ] );
+			return;
+		}
 		$content = ob_get_clean();
-		
+
 		wp_send_json_success( [ 'content' => $content ] );
 	}
 
@@ -271,8 +280,9 @@ class Plugin {
 			wp_send_json_error( [ 'message' => __( 'Unauthorized', 'gf-shortcode-builder' ) ] );
 		}
 
-		$tab_id = isset( $_POST['tab_id'] ) ? sanitize_text_field( wp_unslash( $_POST['tab_id'] ) ) : '';
-		$enabled = isset( $_POST['enabled'] ) && '1' === $_POST['enabled'];
+		$tab_id      = isset( $_POST['tab_id'] ) ? sanitize_text_field( wp_unslash( $_POST['tab_id'] ) ) : '';
+		$enabled_raw = isset( $_POST['enabled'] ) ? sanitize_text_field( wp_unslash( $_POST['enabled'] ) ) : '0';
+		$enabled     = '1' === $enabled_raw;
 
 		if ( empty( $tab_id ) || ! isset( $this->tabs[ $tab_id ] ) ) {
 			wp_send_json_error( [ 'message' => __( 'Invalid tab', 'gf-shortcode-builder' ) ] );
@@ -295,18 +305,18 @@ class Plugin {
 	}
 
 	public function add_notification_shortcode_modal() {
-		// Only add on notification settings page
-		if ( ! isset( $_GET['page'] ) || $_GET['page'] !== 'gf_edit_forms' ) {
+		// Only add on notification settings page.
+		if ( \rgget( 'page' ) !== 'gf_edit_forms' ) {
 			return;
 		}
-		if ( ! isset( $_GET['view'] ) || $_GET['view'] !== 'settings' ) {
+		if ( \rgget( 'view' ) !== 'settings' ) {
 			return;
 		}
-		if ( ! isset( $_GET['subview'] ) || $_GET['subview'] !== 'notification' ) {
+		if ( \rgget( 'subview' ) !== 'notification' ) {
 			return;
 		}
 
-		$form_id = rgget( 'id' );
+		$form_id = \rgget( 'id' );
 		$form    = GFAPI::get_form( $form_id );
 
 		if ( ! $form ) {
@@ -341,7 +351,7 @@ class Plugin {
 	}
 
 	public function settings_page() {
-		$form_id = rgget( 'id' );
+		$form_id = \rgget( 'id' );
 		$form    = GFAPI::get_form( $form_id );
 
 		if ( ! $form ) {
@@ -396,7 +406,7 @@ class Plugin {
 						<div 
 							class="gfsb-accordion" 
 							data-tab="<?php echo esc_attr( $tab_id ); ?>"
-							data-tab-enabled="<?php echo $this->is_tab_enabled( $tab_id ) ? '1' : '0'; ?>"
+							data-tab-enabled="<?php echo esc_attr( $this->is_tab_enabled( $tab_id ) ? '1' : '0' ); ?>"
 							draggable="true"
 							ondragstart="gfsbDragStart(event)"
 							ondragend="gfsbDragEnd(event)"

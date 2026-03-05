@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the Gravity Forms Shortcode Builder plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Forms Shortcode Builder 2.0\n"
+"Project-Id-Version: Gravity Forms Shortcode Builder 1.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-04 21:53+0000\n"
-"PO-Revision-Date: 2025-12-04 21:59+0100\n"
+"POT-Creation-Date: 2026-03-05 12:00+0000\n"
+"PO-Revision-Date: 2026-03-05 15:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -68,6 +68,10 @@ msgstr "Formulaire introuvable"
 #: includes/Plugin.php:244
 msgid "Tab not found"
 msgstr "Section introuvable"
+
+#: includes/Plugin.php:249
+msgid "Error rendering tab content."
+msgstr "Erreur lors du rendu du contenu de la section."
 
 #: includes/Plugin.php:278
 msgid "Invalid tab"
@@ -165,6 +169,10 @@ msgstr "Champ"
 #: views/tabs/conditional.php:35
 msgid "Select a Field"
 msgstr "Sélectionner un champ"
+
+#: views/tabs/conditional.php:43
+msgid "All"
+msgstr "Tous"
 
 #: views/tabs/conditional.php:51
 msgid "Operator"
@@ -732,3 +740,7 @@ msgstr "Liste (HTML formaté)"
 #: views/tabs/user-info.php:71
 msgid "How the data should be formatted when displayed."
 msgstr "Comment les données doivent être formatées lors de l'affichage."
+
+#: includes/class-github-updater.php:336
+msgid "Unable to rename the update folder. Please retry or update manually."
+msgstr "Impossible de renommer le dossier de mise à jour. Veuillez réessayer ou mettre à jour manuellement."

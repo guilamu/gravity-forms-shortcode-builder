@@ -42,9 +42,6 @@
 				window.gfsbNotificationTextarea = el.get(0);
 				if (el.attr('id')) {
 					window.gfsbNotificationEditorId = el.attr('id');
-					console.log('GFSB: detected editor ID', window.gfsbNotificationEditorId, 'via selector', selectors[i]);
-				} else {
-					console.log('GFSB: detected editor textarea without ID via selector', selectors[i]);
 				}
 				return el;
 			}
@@ -272,14 +269,11 @@
 				nonce: gfsbModal.nonce
 			};
 
-			console.log('GFSB: loading tab', tabId, requestData);
-
 			$.ajax({
 				url: ajaxurl,
 				type: 'POST',
 				data: requestData,
 				success: function(response) {
-					console.log('GFSB: tab response', response);
 					if (response && response.success) {
 						$('#gfsb-modal-tab-content').html(response.data.content);
 						gfsbApplyModalLayout();
@@ -321,7 +315,6 @@
 			}
 
 			var editorId = $textarea.attr('id') || '_gform_setting_message';
-			console.log('GFSB: inserting shortcode into editor', editorId);
 			var inserted = false;
 
 			// Try TinyMCE (Visual tab).

@@ -1,8 +1,6 @@
 <?php
 namespace GFSB\Tabs;
 
-use GFCommon;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }

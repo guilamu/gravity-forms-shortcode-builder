@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the Gravity Forms Shortcode Builder plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Forms Shortcode Builder 1.5.0\n"
+"Project-Id-Version: Gravity Forms Shortcode Builder 1.5.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-05 12:00+0000\n"
-"PO-Revision-Date: 2026-03-05 15:37+0100\n"
+"PO-Revision-Date: 2026-03-31 13:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.8\n"
 
 #: includes/Plugin.php:121 includes/Plugin.php:124 includes/Plugin.php:321
 #: includes/Plugin.php:337 includes/Plugin.php:361

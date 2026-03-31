@@ -3,7 +3,7 @@
  * Plugin Name: Gravity Forms Shortcode Builder
  * Plugin URI: https://github.com/guilamu/gravity-forms-shortcode-builder
  * Description: Adds a tool in Form Settings to easily build various Gravity Forms shortcodes. Compatible with GF Advanced Conditional Shortcodes by GravityWiz.
- * Version: 1.5.0
+ * Version: 1.5.1
  * Author: Guilamu
  * Author URI: https://github.com/guilamu
  * Text Domain: gf-shortcode-builder
@@ -25,7 +25,7 @@ if ( defined( 'GFSB_VERSION' ) ) {
 }
 
 // Define plugin constants.
-define( 'GFSB_VERSION', '1.5.0' );
+define( 'GFSB_VERSION', '1.5.1' );
 define( 'GFSB_FILE', __FILE__ );
 define( 'GFSB_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GFSB_URL', plugin_dir_url( __FILE__ ) );
@@ -52,7 +52,24 @@ use GFSB\Plugin;
 
 // GitHub auto-updater.
 require_once __DIR__ . '/includes/class-github-updater.php';
-GFSB_GitHub_Updater::init();
+
+// "View details" thickbox link in the plugins list.
+add_filter( 'plugin_row_meta', function ( $links, $file ) {
+	if ( 'gravity-forms-shortcode-builder/gf-shortcode-builder.php' !== $file ) {
+		return $links;
+	}
+	$links[] = sprintf(
+		'<a href="%s" class="thickbox open-plugin-details-modal" aria-label="%s" data-title="%s">%s</a>',
+		esc_url( self_admin_url(
+			'plugin-install.php?tab=plugin-information&plugin=gravity-forms-shortcode-builder'
+			. '&TB_iframe=true&width=772&height=926'
+		) ),
+		esc_attr__( 'More information about Gravity Forms Shortcode Builder', 'gf-shortcode-builder' ),
+		esc_attr__( 'Gravity Forms Shortcode Builder', 'gf-shortcode-builder' ),
+		esc_html__( 'View details', 'gf-shortcode-builder' )
+	);
+	return $links;
+}, 10, 2 );
 
 add_action( 'plugins_loaded', [ Plugin::class, 'maybe_load_for_ajax' ], 11 );
 add_action( 'gform_loaded', [ Plugin::class, 'get_instance' ] );

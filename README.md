@@ -109,6 +109,12 @@ The builder generates standard Gravity Forms shortcodes — you can edit the cop
 
 ## Changelog
 
+### 1.5.1
+- **Improved:** Rewrote GitHub auto-updater to match reference template — added `plugin_info` with local README.md parsing (Description, Installation, FAQ, Changelog tabs), Parsedown-based Markdown→HTML conversion, `tables_to_divs` for wp_kses compatibility, CSS/JS injection via `admin_head`, `REQUIRES_GF` sidebar line, and `upgrader_source_selection` folder rename with copy+delete fallback
+- **New:** "View details" thickbox link in the plugins list row meta opens the standard WordPress plugin-information modal
+- **New:** Added Parsedown.php for reliable Markdown rendering in the plugin details popup
+- **Fixed:** `check_for_update` now returns all required keys (`id`, `slug`, `plugin`, `new_version`) to prevent `Undefined property` notices on the update screen
+
 ### 1.5.0
 - **New:** Composite field support in the Conditional Shortcodes tab — Address, Name, Checkbox, Time, and Date subfields are now listed individually inside grouped optgroups, with hidden subfields automatically excluded
 - **Fixed:** PHP 7.4 fatal error caused by `str_ends_with()` (PHP 8.0+) in the GitHub auto-updater
